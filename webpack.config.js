@@ -10,8 +10,9 @@ module.exports = {
             {
                 host: 'localhost',
                 port: 3000,
-                files: ['./src/*.php'],
-                proxy: 'http://localhost/SMReload/src/'
+                files: ['./src/*.php', './src/css/*.css'],
+                proxy: 'http://localhost/SMReload/src/',
+                browser: ["iexplore"]
             }
         )
     ]
