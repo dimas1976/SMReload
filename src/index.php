@@ -12,8 +12,9 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/SMReload/dist/css/normalize.css">
+    <link rel="stylesheet" href="/SMReload/dist/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono" rel="stylesheet">
 </head>
 
 <body>
@@ -22,36 +23,40 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 <!-- Add your site or application content here -->
-<header class="page-line header">
-    <img class="header__image" src="img/header/logo.png" alt="Logo Schkola Mama">
+<header class="header">
+    <div class="header__container">
 </header>
 <nav class="page-line navigation">
     <ul class="menu-list navigation__menuItems-container">
         <li class="navigation__menuItem">
-            <svg viewBox="0 0 700 700" class="aboutUs-icon">
-                <use href="#aboutUs"></use>
+            <svg viewBox="0 0 500 475" preserveAspectRatio="xMidYMid meet" class="menu-item-image aboutUs-icon">
+                <use xlink:href="#aboutUs"></use>
+                <span class="menu-item-title">О НАС</span>
             </svg>
         </li>
         <li class="navigation__menuItem">
-            <svg viewBox="0 0 700 600" class="news-icon">
-                <use href="#news"></use>
+            <svg viewBox="0 0 570 330" preserveAspectRatio="xMidYMid meet" class="menu-item-image news-icon">
+                <use xlink:href="#news"></use>
             </svg>
         </li>
         <li class="navigation__menuItem">
-
-            <svg viewBox="0 0 700 700" class="gallery-icon">
-                <use href="#gallery"></use>
+            <svg viewBox="0 0 119 143" preserveAspectRatio="xMidYMid meet" class="menu-item-image gallery-icon">
+                <use xlink:href="#gallery"></use>
             </svg>
         </li>
-        <li class="navigation__menuItem"></li>
+        <li class="navigation__menuItem">
+            <svg viewBox="0 0 600 346" preserveAspectRatio="xMidYMid meet" class="menu-item-image contact-icon">
+                <use xlink:href="#contact"></use>
+            </svg>
+        </li>
     </ul>
 </nav>
 
 <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
 <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="/SMReload/dist/js/plugins.js"></script>
+<script src="/SMReload/dist/js/bundle.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
