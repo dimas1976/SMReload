@@ -172,19 +172,25 @@ body > svg {
 }
 .navigation .navigation__menuItems-container .navigation__menuItem .aboutUs-icon {
   width: 6rem;
-  height: 4.5rem;
+  height: 3.7rem;
 }
 .navigation .navigation__menuItems-container .navigation__menuItem .gallery-icon {
   width: 4rem;
   height: 4rem;
 }
-.navigation .navigation__menuItems-container .navigation__menuItem .news-icon,
-.navigation .navigation__menuItems-container .navigation__menuItem .contact-icon {
+.navigation .navigation__menuItems-container .navigation__menuItem .news-icon {
   width: 6rem;
+  height: 4rem;
+}
+.navigation .navigation__menuItems-container .navigation__menuItem .contact-icon {
+  width: 7rem;
   height: 4rem;
 }
 .navigation .navigation__menuItems-container .navigation__menuItem .menu-item-title {
   font-family: 'Amatic SC', cursiv;
+  font-size: 3em;
+  font-weight: 700;
+  width: 5rem;
 }
 .navigation .menu-list {
   list-style-type: none;
@@ -194,39 +200,38 @@ body > svg {
 }
 .navigation__menuItems-container {
   margin-top: 0;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 0;
   display: flex;
-  align-items: center;
+  justify-content: space-around;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 .navigation__menuItems-container .navigation__menuItem {
-  flex: 1;
-  text-align: center;
+  position: relative;
   justify-self: center;
   align-self: center;
 }
 .navigation__menuItems-container .navigation__menuItem .menu-item-image {
   opacity: 100;
-  margin-top: -15px;
+  /*      &:hover {
+          cursor: pointer;
+          opacity: 0;
+          margin-top: -50px;
+          transition: all .5s;
+
+        & ~ .menu-item-title {
+          color: red;
+          opacity:100;
+          top:0;
+          transition: all .5s;
+        }
+      }*/
 }
 .navigation__menuItems-container .navigation__menuItem .menu-item-title {
-  display: block;
-  opacity: 0;
-  margin-top: -10px;
-}
-.navigation__menuItems-container .navigation__menuItem:hover .menu-item-title {
-  color: red;
-  display: block;
-  opacity: 100;
-  margin-top: -20px;
-  transition: all 2s;
-}
-.navigation__menuItems-container .navigation__menuItem:hover .menu-item-image {
-  opacity: 0;
-  margin-top: -40px;
-  transition: all 1s;
+  position: absolute;
+  top: .6em;
+  left: 0;
+  opacity: 1;
 }
 .page-line-mixin {
   max-width: 1100px;

@@ -12,9 +12,11 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="/SMReload/dist/css/normalize.css">
     <link rel="stylesheet" href="/SMReload/dist/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -29,7 +31,7 @@
 <nav class="page-line navigation">
     <ul class="menu-list navigation__menuItems-container">
         <li class="navigation__menuItem">
-            <svg viewBox="0 0 500 475" preserveAspectRatio="xMidYMid meet" class="menu-item-image aboutUs-icon">
+            <svg viewBox="0 0 500 375" preserveAspectRatio="xMidYMid meet" class="menu-item-image aboutUs-icon">
                 <use xlink:href="#aboutUs"></use>
                 <span class="menu-item-title">О НАС</span>
             </svg>
@@ -45,7 +47,7 @@
             </svg>
         </li>
         <li class="navigation__menuItem">
-            <svg viewBox="0 0 600 346" preserveAspectRatio="xMidYMid meet" class="menu-item-image contact-icon">
+            <svg viewBox="0 0 600 246" preserveAspectRatio="xMidYMid meet" class="menu-item-image contact-icon">
                 <use xlink:href="#contact"></use>
             </svg>
         </li>
