@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono|Montserrat&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="/SMReload/dist/css/normalize.css">
     <link rel="stylesheet" href="/SMReload/dist/css/main.css">
 
@@ -25,10 +25,10 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 <!-- Add your site or application content here -->
-<header class="header">
+<header id="header">
     <div class="header__container">
 </header>
-<nav class="page-line navigation">
+<nav id="navigation">
     <ul class="menu-list navigation__menuItems-container">
         <li class="navigation__menuItem">
             <svg viewBox="0 0 500 375" preserveAspectRatio="xMidYMid meet" class="menu-item-image aboutUs-icon">
@@ -39,21 +39,35 @@
         <li class="navigation__menuItem">
             <svg viewBox="0 0 570 330" preserveAspectRatio="xMidYMid meet" class="menu-item-image news-icon">
                 <use xlink:href="#news"></use>
+                <span class="menu-item-title">НОВОСТИ</span>
             </svg>
         </li>
         <li class="navigation__menuItem">
             <svg viewBox="0 0 119 143" preserveAspectRatio="xMidYMid meet" class="menu-item-image gallery-icon">
                 <use xlink:href="#gallery"></use>
+                <span class="menu-item-title">ГАЛЛЕРЕЯ</span>
             </svg>
         </li>
         <li class="navigation__menuItem">
             <svg viewBox="0 0 600 246" preserveAspectRatio="xMidYMid meet" class="menu-item-image contact-icon">
                 <use xlink:href="#contact"></use>
+                <span class="menu-item-title">КОНТАКТ</span>
             </svg>
         </li>
     </ul>
 </nav>
-
+<main id="content">
+    <div class="presentation">
+<!--        <div class="presentation__video">
+            <video src="video/headerclip.mp4" autoplay loop></video>
+        </div>-->
+        <div class="presentation__image">
+            <svg viewBox="0 0 152 110" preserveAspectRatio="xMidYMin meet" class="display">
+                <use xlink:href="#tv"></use>
+            </svg>
+        </div>
+    </div>
+</main>
 <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
 <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
