@@ -1,49 +1,67 @@
 .header__container {
   padding-bottom: @header-image-margin-bottom;
 }
-
 .navigation__menuItems-container {
-  margin-top:0;
-  padding-left:0;
+  margin-top: 0;
+  padding-left: 0;
   display: flex;
   justify-content: space-around;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   .navigation__menuItem {
     position: relative;
     justify-self: center;
     align-self: center;
+    pointer-events: none;
 
     .menu-item-image {
       opacity: 100;
+      pointer-events: auto;
+      cursor: pointer;
 
-/*      &:hover {
-          cursor: pointer;
-          opacity: 0;
-          margin-top: -50px;
-          transition: all .5s;
+      &:hover {
+        opacity: 0;
+        margin-top: -50px;
+        transition: all 1s;
 
         & ~ .menu-item-title {
-          color: red;
-          opacity:100;
-          top:0;
-          transition: all .5s;
+          color: #f21322;
+          opacity: 100;
+          top: -.5em;
+          transition: all 1s;
         }
-      }*/
+      }
+
+      &:not(:hover) {
+        opacity: 100;
+        margin-top: 0px;
+        transition: all 1s;
+
+        & ~ .menu-item-title {
+          color: #000;
+          opacity: 0;
+          top: .5em;
+          transition: all 1s;
+        }
+      }
 
     }
 
     .menu-item-title {
       //display: block;
       position: absolute;
-      top: .6em;
+      top: .5em;
       left: 0;
-      opacity: 1;
+      opacity: 0;
     }
-
-
 
   }
 
 }
+.presentation {
+  display: flex;
+  justify-content: space-around;
+  align-content: stretch;
+}
+
