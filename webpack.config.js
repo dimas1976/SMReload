@@ -5,7 +5,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const path = require ('path');
 
 module.exports = {
-    entry: ['./src/js/script1.js','./src/js/script2.js'],
+    entry: './src/js/presentation.es6',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist/js')
@@ -30,7 +30,7 @@ module.exports = {
             {
                 host: 'localhost',
                 port: 3000,
-                files: ['./src/*.php', './src/css/*.css'],
+                files: ['./src/*.php', './dist/css/*.css'],
                 proxy: 'http://localhost/SMReload/src/',
                 browser: ["iexplore"]
             }

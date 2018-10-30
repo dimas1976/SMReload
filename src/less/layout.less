@@ -1,19 +1,17 @@
 
 #header {
-  .page-line-mixin;
-
   .header__container {
+    .page-line-mixin;
     height: 12rem;
     background: #c2ecfb url("../img/header/logo.jpg") top center no-repeat;
     background-size: contain;
   }
 }
-
 #navigation {
   .page-line-mixin;
   background-color: #c2ecfb;
 
-  .navigation__menuItems-container {
+  .navigation__menuItemsContainer {
     background-color: rgba(255, 255, 255, .5);
     height: 6rem;
 
@@ -46,19 +44,49 @@
   }
   .menu-list {
     list-style-type: none;
+    .navigation-shadow-mixin;
   }
 }
+.content {
 
-#content {
-  .page-line-mixin;
+  #presentation{
+    .page-line-mixin;
+    height: 58rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, .85) 99%), url('../img/content/presentationBG.jpg') top center no-repeat;
+    background-size: cover;
 
-  .presentation{
-    height: 43rem;
 
+    box-sizing: border-box;
+    .presentation__video {
+      video {
+        width: 51.5rem;
+      }
+    }
+    .presentation__button {
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+    }
+    .presentation__iframe {
+      display: none;
+      iframe {
+        width: 51.5rem;
+        height: 28.6em;
+      }
+    }
     .display {
-      width: 500px;
+      width: 55rem;
     }
   }
+  .aboutUs__anna {
+    .page-line-mixin;
 
+    background: linear-gradient(rgba(19,210,253,.17) 1%,rgba(98,194,193,1) 20%);
+
+    .cloud {
+      width: 40rem;
+      height: 50rem;
+    }
+  }
 }
 

@@ -1,67 +1,100 @@
 .header__container {
   padding-bottom: @header-image-margin-bottom;
 }
-.navigation__menuItems-container {
-  margin-top: 0;
-  padding-left: 0;
-  display: flex;
-  justify-content: space-around;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
 
-  .navigation__menuItem {
-    position: relative;
-    justify-self: center;
-    align-self: center;
-    pointer-events: none;
+#navigation {
+  .navigation__menuItemsContainer {
+    margin-top: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-    .menu-item-image {
-      opacity: 100;
-      pointer-events: auto;
-      cursor: pointer;
+    .navigation__menuItem {
+      position: relative;
+      justify-self: center;
+      align-self: center;
+      pointer-events: none;
 
-      &:hover {
-        opacity: 0;
-        margin-top: -50px;
-        transition: all 1s;
-
-        & ~ .menu-item-title {
-          color: #f21322;
-          opacity: 100;
-          top: -.5em;
-          transition: all 1s;
-        }
-      }
-
-      &:not(:hover) {
+      .menu-item-image {
         opacity: 100;
-        margin-top: 0px;
-        transition: all 1s;
+        pointer-events: auto;
+        cursor: pointer;
 
-        & ~ .menu-item-title {
-          color: #000;
+        &:hover {
           opacity: 0;
-          top: .5em;
+          margin-top: -50px;
           transition: all 1s;
+
+          & ~ .menu-item-title {
+            color: #f21322;
+            opacity: 100;
+            top: -.5em;
+            transition: all 1s;
+          }
         }
+
+        &:not(:hover) {
+          opacity: 100;
+          margin-top: 0px;
+          transition: all 1s;
+
+          & ~ .menu-item-title {
+            color: #000;
+            opacity: 0;
+            top: .5em;
+            transition: all 1s;
+          }
+        }
+
+      }
+
+      .menu-item-title {
+        //display: block;
+        position: absolute;
+        top: .5em;
+        left: 0;
+        opacity: 0;
       }
 
     }
-
-    .menu-item-title {
-      //display: block;
-      position: absolute;
-      top: .5em;
-      left: 0;
-      opacity: 0;
-    }
-
   }
-
+  .menu-list {
+    position: relative;
+    z-index: 999;
+  }
 }
-.presentation {
+
+#presentation {
   display: flex;
   justify-content: space-around;
-  align-content: stretch;
+  padding-top: @content-block-padding-top;
+  padding-bottom: @content-block-padding-bottom;
+
+  .presentation__image {
+    margin: 0 auto;
+    position: relative;
+    .presentation__video {
+      position: absolute;
+      left: 1.7em;
+      top: 2em;
+    }
+    .presentation__button {
+      position: absolute;
+      left:3em;
+      bottom:11em;
+    }
+    .presentation__iframe {
+      position: absolute;
+      left:1.7em;
+      bottom: 9.6em;
+    }
+  }
+}
+
+.teacher {
+  padding-top: @teacher-padding-top;
+  padding-bottom: @teacher-padding-bottom;
 }
 

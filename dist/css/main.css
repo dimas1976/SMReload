@@ -152,11 +152,12 @@ textarea {
 body > svg {
   display: none;
 }
-#header {
-  max-width: 1100px;
-  margin: auto;
+body ul {
+  margin-bottom: 0;
 }
 #header .header__container {
+  max-width: 1100px;
+  margin: auto;
   height: 12rem;
   background: #c2ecfb url("../img/header/logo.jpg") top center no-repeat;
   background-size: contain;
@@ -166,27 +167,27 @@ body > svg {
   margin: auto;
   background-color: #c2ecfb;
 }
-#navigation .navigation__menuItems-container {
+#navigation .navigation__menuItemsContainer {
   background-color: rgba(255, 255, 255, 0.5);
   height: 6rem;
 }
-#navigation .navigation__menuItems-container .navigation__menuItem .aboutUs-icon {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .aboutUs-icon {
   width: 6rem;
   height: 3.7rem;
 }
-#navigation .navigation__menuItems-container .navigation__menuItem .gallery-icon {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .gallery-icon {
   width: 4rem;
   height: 4rem;
 }
-#navigation .navigation__menuItems-container .navigation__menuItem .news-icon {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .news-icon {
   width: 6rem;
   height: 4rem;
 }
-#navigation .navigation__menuItems-container .navigation__menuItem .contact-icon {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .contact-icon {
   width: 7rem;
   height: 4rem;
 }
-#navigation .navigation__menuItems-container .navigation__menuItem .menu-item-title {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-title {
   font-family: 'Amatic SC', cursiv;
   font-size: 3em;
   font-weight: 700;
@@ -194,21 +195,47 @@ body > svg {
 }
 #navigation .menu-list {
   list-style-type: none;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.2);
 }
-#content {
+.content #presentation {
   max-width: 1100px;
   margin: auto;
+  height: 58rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.85) 99%), url('../img/content/presentationBG.jpg') top center no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
 }
-#content .presentation {
-  height: 43rem;
+.content #presentation .presentation__video video {
+  width: 51.5rem;
 }
-#content .presentation .display {
-  width: 500px;
+.content #presentation .presentation__button {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.content #presentation .presentation__iframe {
+  display: none;
+}
+.content #presentation .presentation__iframe iframe {
+  width: 51.5rem;
+  height: 28.6em;
+}
+.content #presentation .display {
+  width: 55rem;
+}
+.content .aboutUs__anna {
+  max-width: 1100px;
+  margin: auto;
+  background: linear-gradient(rgba(19, 210, 253, 0.17) 1%, #62c2c1 20%);
+}
+.content .aboutUs__anna .cloud {
+  width: 40rem;
+  height: 50rem;
 }
 .header__container {
   padding-bottom: 0.9em;
 }
-.navigation__menuItems-container {
+#navigation .navigation__menuItemsContainer {
   margin-top: 0;
   padding-left: 0;
   display: flex;
@@ -216,49 +243,77 @@ body > svg {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.navigation__menuItems-container .navigation__menuItem {
+#navigation .navigation__menuItemsContainer .navigation__menuItem {
   position: relative;
   justify-self: center;
   align-self: center;
   pointer-events: none;
 }
-.navigation__menuItems-container .navigation__menuItem .menu-item-image {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-image {
   opacity: 100;
   pointer-events: auto;
   cursor: pointer;
 }
-.navigation__menuItems-container .navigation__menuItem .menu-item-image:hover {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-image:hover {
   opacity: 0;
   margin-top: -50px;
   transition: all 1s;
 }
-.navigation__menuItems-container .navigation__menuItem .menu-item-image:hover ~ .menu-item-title {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-image:hover ~ .menu-item-title {
   color: #f21322;
   opacity: 100;
   top: -0.5em;
   transition: all 1s;
 }
-.navigation__menuItems-container .navigation__menuItem .menu-item-image:not(:hover) {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-image:not(:hover) {
   opacity: 100;
   margin-top: 0px;
   transition: all 1s;
 }
-.navigation__menuItems-container .navigation__menuItem .menu-item-image:not(:hover) ~ .menu-item-title {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-image:not(:hover) ~ .menu-item-title {
   color: #000;
   opacity: 0;
   top: .5em;
   transition: all 1s;
 }
-.navigation__menuItems-container .navigation__menuItem .menu-item-title {
+#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-title {
   position: absolute;
   top: .5em;
   left: 0;
   opacity: 0;
 }
-.presentation {
+#navigation .menu-list {
+  position: relative;
+  z-index: 999;
+}
+#presentation {
   display: flex;
   justify-content: space-around;
-  align-content: stretch;
+  padding-top: 11.3em;
+  padding-bottom: 6.6em;
+}
+#presentation .presentation__image {
+  margin: 0 auto;
+  position: relative;
+}
+#presentation .presentation__image .presentation__video {
+  position: absolute;
+  left: 1.7em;
+  top: 2em;
+}
+#presentation .presentation__image .presentation__button {
+  position: absolute;
+  left: 3em;
+  bottom: 11em;
+}
+#presentation .presentation__image .presentation__iframe {
+  position: absolute;
+  left: 1.7em;
+  bottom: 9.6em;
+}
+.teacher {
+  padding-top: 7.9em;
+  padding-bottom: 3.3em;
 }
 .page-line-mixin {
   max-width: 1100px;

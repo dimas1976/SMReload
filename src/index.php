@@ -15,8 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono|Montserrat&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="/SMReload/dist/css/normalize.css">
     <link rel="stylesheet" href="/SMReload/dist/css/main.css">
-
-
 </head>
 
 <body>
@@ -26,10 +24,10 @@
 <![endif]-->
 <!-- Add your site or application content here -->
 <header id="header">
-    <div class="header__container">
+    <div class="header__container"></div>
 </header>
 <nav id="navigation">
-    <ul class="menu-list navigation__menuItems-container">
+    <ul class="menu-list navigation__menuItemsContainer">
         <li class="navigation__menuItem">
             <svg viewBox="0 0 500 375" preserveAspectRatio="xMidYMid meet" class="menu-item-image aboutUs-icon">
                 <use xlink:href="#aboutUs"></use>
@@ -56,22 +54,39 @@
         </li>
     </ul>
 </nav>
-<main id="content">
-    <div class="presentation">
-<!--        <div class="presentation__video">
-            <video src="video/headerclip.mp4" autoplay loop></video>
-        </div>-->
+<main class="content">
+    <div id="presentation">
         <div class="presentation__image">
             <svg viewBox="0 0 152 110" preserveAspectRatio="xMidYMin meet" class="display">
                 <use xlink:href="#tv"></use>
             </svg>
+            <div class="presentation__video">
+                <video src="video/headerclip.mp4" autoplay loop muted />
+            </div>
+            <div class="presentation__button">
+                    <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMin meet" class="btToYT">
+                        <use xlink:href="#btToYT"></use>
+                    </svg>
+            </div>
+            <div class="presentation__iframe">
+                <iframe name="smIFrame" src="https://www.youtube.com/embed/OrpoZ8U3-D4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="aboutUs">
+        <div class="aboutUs__anna teacher">
+            <div class="cloud">
+                <svg width="800px" height="1000px" viewBox="0 0 800 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="#teacher-cloud-1"></use>
+                </svg>
+            </div>
         </div>
     </div>
 </main>
-<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
+<!--<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
 <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-<script src="/SMReload/dist/js/plugins.js"></script>
+<script src="/SMReload/dist/js/plugins.js"></script>-->
 <script src="/SMReload/dist/js/bundle.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
