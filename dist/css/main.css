@@ -205,32 +205,50 @@ body ul {
   background-size: cover;
   box-sizing: border-box;
 }
-.content #presentation .presentation__video video {
-  width: 51.5rem;
+.content #presentation .image {
+  width: 51rem;
+  height: 37rem;
 }
-.content #presentation .presentation__button {
+.content #presentation .image .video video {
+  width: 47.6rem;
+}
+.content #presentation .image .button {
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
 }
-.content #presentation .presentation__iframe {
+.content #presentation .image .iframe {
   display: none;
 }
-.content #presentation .presentation__iframe iframe {
+.content #presentation .image .iframe iframe {
   width: 51.5rem;
   height: 28.6em;
 }
 .content #presentation .display {
-  width: 55rem;
+  /*    width: 55rem;*/
 }
-.content .aboutUs__anna {
+.content #aboutUs {
   max-width: 1100px;
   margin: auto;
+}
+.content #aboutUs .aboutUs__anna {
   background: linear-gradient(rgba(19, 210, 253, 0.17) 1%, #62c2c1 20%);
 }
-.content .aboutUs__anna .cloud {
+.content #aboutUs .aboutUs__anna .cloud {
   width: 40rem;
   height: 50rem;
+}
+.content #aboutUs .aboutUs__anna .cloud .cloudText {
+  width: 29rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+}
+.content #aboutUs .avatar {
+  width: 21.9rem;
+  background: url('../img/svg/svg_defs.svg#teacher-round-frame');
 }
 .header__container {
   padding-bottom: 0.9em;
@@ -292,28 +310,43 @@ body ul {
   padding-top: 11.3em;
   padding-bottom: 6.6em;
 }
-#presentation .presentation__image {
+#presentation .image {
   margin: 0 auto;
   position: relative;
 }
-#presentation .presentation__image .presentation__video {
+#presentation .image .video {
   position: absolute;
   left: 1.7em;
-  top: 2em;
+  top: 1.5em;
 }
-#presentation .presentation__image .presentation__button {
+#presentation .image .button {
   position: absolute;
   left: 3em;
-  bottom: 11em;
+  bottom: 10em;
 }
-#presentation .presentation__image .presentation__iframe {
+#presentation .image .iframe {
   position: absolute;
   left: 1.7em;
   bottom: 9.6em;
 }
-.teacher {
+#aboutUs .aboutUs__anna {
   padding-top: 7.9em;
   padding-bottom: 3.3em;
+  padding-right: 8.3em;
+}
+#aboutUs .aboutUs__anna .right-side {
+  margin-left: auto;
+}
+#aboutUs .aboutUs__anna .left-side {
+  margin-right: auto;
+}
+#aboutUs .aboutUs__anna .cloud {
+  position: relative;
+}
+#aboutUs .aboutUs__anna .cloud .cloudText {
+  position: absolute;
+  top: 4.6em;
+  left: 6em;
 }
 .page-line-mixin {
   max-width: 1100px;

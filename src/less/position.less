@@ -72,20 +72,20 @@
   padding-top: @content-block-padding-top;
   padding-bottom: @content-block-padding-bottom;
 
-  .presentation__image {
+  .image {
     margin: 0 auto;
     position: relative;
-    .presentation__video {
+    .video {
       position: absolute;
       left: 1.7em;
-      top: 2em;
+      top: 1.5em;
     }
-    .presentation__button {
+    .button {
       position: absolute;
       left:3em;
-      bottom:11em;
+      bottom:10em;
     }
-    .presentation__iframe {
+    .iframe {
       position: absolute;
       left:1.7em;
       bottom: 9.6em;
@@ -93,8 +93,25 @@
   }
 }
 
-.teacher {
-  padding-top: @teacher-padding-top;
-  padding-bottom: @teacher-padding-bottom;
+#aboutUs {
+  .aboutUs__anna {
+    .teacher-container-adjust-mixin;
+
+    .right-side {
+      margin-left:auto;
+    }
+    .left-side {
+      margin-right: auto;
+    }
+    .cloud {
+      position: relative;
+
+      .cloudText {
+        position: absolute;
+        top: 4.6em;
+        left: 6em;
+      }
+    }
+  }
 }
 

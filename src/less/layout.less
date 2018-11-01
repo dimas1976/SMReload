@@ -7,6 +7,7 @@
     background-size: contain;
   }
 }
+
 #navigation {
   .page-line-mixin;
   background-color: #c2ecfb;
@@ -16,7 +17,7 @@
     height: 6rem;
 
     .navigation__menuItem {
-      .aboutUs-icon{
+      .aboutUs-icon {
         width: 6rem;
         height: 3.7rem;
       }
@@ -34,7 +35,7 @@
         height: 4rem;
       }
       .menu-item-title {
-        font-family: 'Amatic SC',cursiv;
+        font-family: 'Amatic SC', cursiv;
         font-size: 3em;
         font-weight: 700;
         width: 5rem;
@@ -47,45 +48,62 @@
     .navigation-shadow-mixin;
   }
 }
+
 .content {
 
-  #presentation{
+  #presentation {
     .page-line-mixin;
     height: 58rem;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, .85) 99%), url('../img/content/presentationBG.jpg') top center no-repeat;
     background-size: cover;
-
-
     box-sizing: border-box;
-    .presentation__video {
-      video {
-        width: 51.5rem;
+
+    .image {
+      width: 51rem;
+      height: 37rem;
+
+      .video {
+        video {
+          width: 47.6rem;
+        }
       }
-    }
-    .presentation__button {
-      width: 2.5rem;
-      height: 2.5rem;
-      cursor: pointer;
-    }
-    .presentation__iframe {
-      display: none;
-      iframe {
-        width: 51.5rem;
-        height: 28.6em;
+      .button {
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+      }
+      .iframe {
+        display: none;
+        iframe {
+          width: 51.5rem;
+          height: 28.6em;
+        }
       }
     }
     .display {
-      width: 55rem;
+      /*    width: 55rem;*/
     }
   }
-  .aboutUs__anna {
+  #aboutUs {
     .page-line-mixin;
-
-    background: linear-gradient(rgba(19,210,253,.17) 1%,rgba(98,194,193,1) 20%);
-
-    .cloud {
-      width: 40rem;
-      height: 50rem;
+    .aboutUs__anna {
+      background: linear-gradient(rgba(19, 210, 253, .17) 1%, rgba(98, 194, 193, 1) 20%);
+      .cloud {
+        width: 40rem;
+        height: 50rem;
+        .cloudText {
+          width: 29rem;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          font-style: italic;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+    .avatar {
+      width: 21.9rem;
+      background: url('../img/svg/svg_defs.svg#teacher-round-frame');
     }
   }
 }
