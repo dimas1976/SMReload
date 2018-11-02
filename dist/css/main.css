@@ -172,8 +172,8 @@ body ul {
   height: 6rem;
 }
 #navigation .navigation__menuItemsContainer .navigation__menuItem .aboutUs-icon {
-  width: 6rem;
-  height: 3.7rem;
+  width: 4rem;
+  height: 4rem;
 }
 #navigation .navigation__menuItemsContainer .navigation__menuItem .gallery-icon {
   width: 4rem;
@@ -289,6 +289,18 @@ body ul {
   align-self: center;
   pointer-events: none;
 }
+#navigation .navigation__menuItemsContainer .navigation__menuItem:nth-child(2) {
+  padding: 0 .8em;
+}
+#navigation .navigation__menuItemsContainer .navigation__menuItem:nth-child(3) {
+  padding: 0 1.8em;
+}
+#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-title {
+  position: absolute;
+  top: .5em;
+  left: 0;
+  opacity: 0;
+}
 #navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-image {
   opacity: 100;
   pointer-events: auto;
@@ -315,12 +327,6 @@ body ul {
   opacity: 0;
   top: .5em;
   transition: all 1s;
-}
-#navigation .navigation__menuItemsContainer .navigation__menuItem .menu-item-title {
-  position: absolute;
-  top: .5em;
-  left: 0;
-  opacity: 0;
 }
 #navigation .menu-list {
   position: relative;
@@ -355,7 +361,7 @@ body ul {
   /*  padding-top: @teacher-container-padding-top;
   padding-bottom: @teacher-container-padding-bottom;
   padding-right-left: @teacher-container-padding-right-left;*/
-  padding: 7.9em 8.3em 3.3em;
+  padding: 7.8em 8.3em 3.3em;
 }
 #aboutUs .aboutUs__container .right-side {
   margin-left: auto;

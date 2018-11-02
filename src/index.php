@@ -28,28 +28,28 @@
 <nav id="navigation">
     <ul class="menu-list navigation__menuItemsContainer">
         <li class="navigation__menuItem">
-            <svg viewBox="0 0 500 375" preserveAspectRatio="xMidYMid meet" class="menu-item-image aboutUs-icon">
+            <svg viewBox="0 0 380 370" preserveAspectRatio="xMinYMin meet" class="menu-item-image aboutUs-icon">
                 <use xlink:href="#aboutUs"></use>
-                <span class="menu-item-title">О НАС</span>
             </svg>
+            <span class="menu-item-title">О НАС</span>
         </li>
         <li class="navigation__menuItem">
-            <svg viewBox="0 0 570 330" preserveAspectRatio="xMidYMid meet" class="menu-item-image news-icon">
+            <svg viewBox="0 0 470 330" preserveAspectRatio="xMinYMin meet" class="menu-item-image news-icon">
                 <use xlink:href="#news"></use>
-                <span class="menu-item-title">НОВОСТИ</span>
             </svg>
+            <span class="menu-item-title">НОВОСТИ</span>
         </li>
         <li class="navigation__menuItem">
             <svg viewBox="0 0 119 143" preserveAspectRatio="xMidYMid meet" class="menu-item-image gallery-icon">
                 <use xlink:href="#gallery"></use>
-                <span class="menu-item-title">ГАЛЛЕРЕЯ</span>
             </svg>
+            <span class="menu-item-title">ГАЛЛЕРЕЯ</span>
         </li>
         <li class="navigation__menuItem">
             <svg viewBox="0 0 600 246" preserveAspectRatio="xMidYMid meet" class="menu-item-image contact-icon">
                 <use xlink:href="#contact"></use>
-                <span class="menu-item-title">КОНТАКТ</span>
             </svg>
+            <span class="menu-item-title">КОНТАКТ</span>
         </li>
     </ul>
 </nav>
