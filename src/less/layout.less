@@ -50,7 +50,6 @@
 }
 
 .content {
-
   #presentation {
     .page-line-mixin;
     height: 58rem;
@@ -75,36 +74,60 @@
       .iframe {
         display: none;
         iframe {
-          width: 51.5rem;
-          height: 28.6em;
+          width: 47.6rem;
+          height: 26.6em;
         }
       }
     }
-    .display {
-      /*    width: 55rem;*/
-    }
+
   }
   #aboutUs {
     .page-line-mixin;
-    .aboutUs__anna {
+    .aboutUs__container--greenBG {
       background: linear-gradient(rgba(19, 210, 253, .17) 1%, rgba(98, 194, 193, 1) 20%);
-      .cloud {
-        width: 40rem;
-        height: 50rem;
-        .cloudText {
-          width: 29rem;
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 700;
-          font-style: italic;
-          color: #fff;
-          text-align: center;
-        }
+    }
+    .aboutUs__container--purpleBG {
+      background: linear-gradient(rgba(98, 194, 193, 1) 1%, rgba(179, 120, 174, 1) 30%);
+    }
+    .aboutUs__container--purpleGreenBG {
+      background: linear-gradient(rgba(179, 120, 174, 1) 1%, rgba(98, 194, 193, 1) 30%);
+    }
+    .cloud {
+      width: 38rem;
+      height: 34rem;
+      .cloud__image--left {
+        transform: scaleX(-1);
+      }
+      .cloud__text--anna,
+      .cloud__text--nadja {
+        width: 29rem;
+      }
+      .cloud__text--vika {
+        width: 26rem;
       }
     }
-    .avatar {
-      width: 21.9rem;
-      background: url('../img/svg/svg_defs.svg#teacher-round-frame');
+  }
+  .cloud__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5em;
+  }
+  .cloud__image--rotated {
+    transform: scaleY(-1);
+  }
+  .avatar {
+    width: 15rem;
+    height: 15rem;
+    /*      background: url('../img/svg/svg_defs.svg#teacher-round-frame');*/
+    .avatar__image {
+      width: 14.3rem;
+      border-radius: 50%;
     }
   }
 }
+
 

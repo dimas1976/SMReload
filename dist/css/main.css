@@ -221,34 +221,56 @@ body ul {
   display: none;
 }
 .content #presentation .image .iframe iframe {
-  width: 51.5rem;
-  height: 28.6em;
-}
-.content #presentation .display {
-  /*    width: 55rem;*/
+  width: 47.6rem;
+  height: 26.6em;
 }
 .content #aboutUs {
   max-width: 1100px;
   margin: auto;
 }
-.content #aboutUs .aboutUs__anna {
+.content #aboutUs .aboutUs__container--greenBG {
   background: linear-gradient(rgba(19, 210, 253, 0.17) 1%, #62c2c1 20%);
 }
-.content #aboutUs .aboutUs__anna .cloud {
-  width: 40rem;
-  height: 50rem;
+.content #aboutUs .aboutUs__container--purpleBG {
+  background: linear-gradient(#62c2c1 1%, #b378ae 30%);
 }
-.content #aboutUs .aboutUs__anna .cloud .cloudText {
+.content #aboutUs .aboutUs__container--purpleGreenBG {
+  background: linear-gradient(#b378ae 1%, #62c2c1 30%);
+}
+.content #aboutUs .cloud {
+  width: 38rem;
+  height: 34rem;
+}
+.content #aboutUs .cloud .cloud__image--left {
+  transform: scaleX(-1);
+}
+.content #aboutUs .cloud .cloud__text--anna,
+.content #aboutUs .cloud .cloud__text--nadja {
   width: 29rem;
+}
+.content #aboutUs .cloud .cloud__text--vika {
+  width: 26rem;
+}
+.content .cloud__text {
   font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
   font-weight: 700;
   font-style: italic;
   color: #fff;
   text-align: center;
+  line-height: 1.5em;
 }
-.content #aboutUs .avatar {
-  width: 21.9rem;
-  background: url('../img/svg/svg_defs.svg#teacher-round-frame');
+.content .cloud__image--rotated {
+  transform: scaleY(-1);
+}
+.content .avatar {
+  width: 15rem;
+  height: 15rem;
+  /*      background: url('../img/svg/svg_defs.svg#teacher-round-frame');*/
+}
+.content .avatar .avatar__image {
+  width: 14.3rem;
+  border-radius: 50%;
 }
 .header__container {
   padding-bottom: 0.9em;
@@ -327,26 +349,45 @@ body ul {
 #presentation .image .iframe {
   position: absolute;
   left: 1.7em;
-  bottom: 9.6em;
+  bottom: 9em;
 }
-#aboutUs .aboutUs__anna {
-  padding-top: 7.9em;
-  padding-bottom: 3.3em;
-  padding-right: 8.3em;
+#aboutUs .aboutUs__container {
+  /*  padding-top: @teacher-container-padding-top;
+  padding-bottom: @teacher-container-padding-bottom;
+  padding-right-left: @teacher-container-padding-right-left;*/
+  padding: 7.9em 8.3em 3.3em;
 }
-#aboutUs .aboutUs__anna .right-side {
+#aboutUs .aboutUs__container .right-side {
   margin-left: auto;
 }
-#aboutUs .aboutUs__anna .left-side {
+#aboutUs .aboutUs__container .left-side {
   margin-right: auto;
 }
-#aboutUs .aboutUs__anna .cloud {
+#aboutUs .aboutUs__container .cloud {
   position: relative;
 }
-#aboutUs .aboutUs__anna .cloud .cloudText {
+#aboutUs .aboutUs__container .cloud .cloud__text {
   position: absolute;
-  top: 4.6em;
-  left: 6em;
+}
+#aboutUs .aboutUs__container .cloud .cloud__text--anna {
+  top: 6em;
+  left: 6.7em;
+}
+#aboutUs .aboutUs__container .cloud .cloud__text--nadja {
+  top: 4em;
+  left: 5em;
+}
+#aboutUs .aboutUs__container .cloud .cloud__text--vika {
+  top: 9em;
+  left: 6.7em;
+}
+#aboutUs .aboutUs__container .avatar {
+  position: relative;
+}
+#aboutUs .aboutUs__container .avatar .avatar__image {
+  position: absolute;
+  top: .3em;
+  left: .4em;
 }
 .page-line-mixin {
   max-width: 1100px;
