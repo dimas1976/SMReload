@@ -200,7 +200,6 @@ body ul {
 .content #presentation {
   max-width: 1100px;
   margin: auto;
-  height: 58rem;
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.85) 99%), url('../img/content/presentationBG.jpg') top center no-repeat;
   background-size: cover;
   box-sizing: border-box;
@@ -212,10 +211,20 @@ body ul {
 .content #presentation .image .video video {
   width: 47.6rem;
 }
-.content #presentation .image .button {
+.content #presentation .image .button .button__image {
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
+}
+.content #presentation .image .button .button__title {
+  display: inline-block;
+  width: 20rem;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  vertical-align: bottom;
+  color: #fff;
+  text-shadow: 2px 2px #000;
 }
 .content #presentation .image .iframe {
   display: none;
@@ -231,7 +240,7 @@ body ul {
 .content #aboutUs .aboutUs__container--greenBG {
   background: linear-gradient(rgba(19, 210, 253, 0.17) 1%, #62c2c1 20%);
 }
-.content #aboutUs .aboutUs__container--purpleBG {
+.content #aboutUs .aboutUs__container--greenPurpleBG {
   background: linear-gradient(#62c2c1 1%, #b378ae 30%);
 }
 .content #aboutUs .aboutUs__container--purpleGreenBG {

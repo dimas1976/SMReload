@@ -66,9 +66,10 @@
                     </video>
                 </div>
                 <div class="button">
-                    <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMin meet" class="btToYT">
+                    <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMin meet" class="button__image">
                         <use xlink:href="#btToYT"></use>
                     </svg>
+                    <span class="button__title">Проиграть видео здесь</span>
                 </div>
                 <div class="iframe">
                     <iframe name="smIFrame" src="https://www.youtube.com/embed/OrpoZ8U3-D4" frameborder="0"
@@ -80,7 +81,7 @@
     <div id="aboutUs">
         <div class="aboutUs__container aboutUs__container--greenBG">
             <div class="cloud right-side">
-                <svg viewBox="0 0 440 400" preserveAspectRatio="xMidYMin meet"
+                <svg class="cloud__image" viewBox="0 0 440 400" preserveAspectRatio="xMidYMin meet"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <use xlink:href="#teacher-cloud-1"></use>
                 </svg>
@@ -100,11 +101,59 @@
                      alt="Анна Бурдина-учитель русского языка">
             </div>
         </div>
-        <div class="aboutUs__container aboutUs__container--purpleBG">
+        <div class="aboutUs__container aboutUs__container--greenPurpleBG">
             <div class="cloud left-side">
                 <svg class="cloud__image" viewBox="0 0 1250 1200" preserveAspectRatio="xMidYMid meet"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <use xlink:href="#teacher-cloud-4"></use>
+                </svg>
+                <div class="cloud__text cloud__text--nadja">
+                    Надежда Крювель- дипломированый педагог по хореографии. Вот уже 30 лет, как после окончания школы ,
+                    мастер спорта международного класса по бальным танцам начала сама преподавать детям ритмику и танец
+                    в Областном дворце культуры г.Владимира. Там же она окончила колледж культуры по отделению
+                    хореографии и параллельно с ним психологический факультет педагогического университета. Два года в
+                    одной из частных танцевальных школ в Болгарии преподавала для малышей основы хореографии, а для
+                    детей постарше-спортивный бальный танец. С 2010 года ведет театр в русской школе выходного дня
+                    "Азбука" в нашем городе. Несколько лет назад стала преподавать основы раннего танцевального развития
+                    и в Школе мамы.
+                </div>
+            </div>
+            <div class="avatar right-side">
+                <svg class="avatar__bg" viewBox="0 0 1300 1300" preserveAspectRatio="xMidYMid meet">
+                    <use xlink:href="#teacher-round-frame"/>
+                </svg>
+                <img class="avatar__image" src="img/content/teachers/anna.jpg"
+                     alt="Надежда Кровель-дипломированый педагог по хореографии">
+            </div>
+        </div>
+        <div class="aboutUs__container aboutUs__container--purpleGreenBG">
+            <div class="cloud right-side">
+                <svg class="cloud__image cloud__image--rotated" viewBox="0 0 950 810"
+                     preserveAspectRatio="xMidYMid meet"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="#teacher-cloud-3"></use>
+                </svg>
+                <div class="cloud__text cloud__text--vika">
+                    Виктория Аронова
+                    (окончила Луганский педагогический институт, продолжает образование в Гамбурском университете, опыт
+                    работы с детьми более 15 лет) проводит игры,способствующие развитию логического и образного,
+                    ассоциативного мышления. При помощи специальных пособий и заданий на уроке формируются элементарные
+                    математические представления, закрепляется понятие о цвете, форме и величине.
+                </div>
+            </div>
+            <div class="avatar left-side">
+                <svg class="avatar__bg" viewBox="0 0 1300 1300" preserveAspectRatio="xMidYMid meet">
+                    <use xlink:href="#teacher-round-frame"/>
+                </svg>
+                <img class="avatar__image" src="img/content/teachers/vika.jpg"
+                     alt="Виктория Аронова развивает логику и образное мышление у детей">
+            </div>
+        </div>
+        <div class="aboutUs__container aboutUs__container--greenPurpleBG">
+            <div class="cloud left-side">
+                <svg class="cloud__image" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="#teacher-cloud-2"></use>
                 </svg>
                 <div class="cloud__text cloud__text--nadja">
                     Надежда Крювель- дипломированый педагог по хореографии. Вот уже 30 лет, как после окончания школы ,
@@ -127,21 +176,23 @@
         </div>
         <div class="aboutUs__container aboutUs__container--purpleGreenBG">
             <div class="cloud right-side">
-                <svg class="cloud__image cloud__image--rotated" viewBox="0 0 950 810"
-                     preserveAspectRatio="xMidYMid meet"
+                <svg class="cloud__image" viewBox="0 0 1200 980" preserveAspectRatio="xMidYMid meet"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <use xlink:href="#teacher-cloud-3"></use>
+                    <use xlink:href="#teacher-cloud-5"></use>
                 </svg>
-                <div class="cloud__text cloud__text--vika">
-                    Виктория Аронова
-                    (окончила Луганский педагогический институт, продолжает образование в Гамбурском университете, опыт
-                    работы с детьми более 15 лет) проводит игры,способствующие развитию логического и образного,
-                    ассоциативного мышления. При помощи специальных пособий и заданий на уроке формируются элементарные
-                    математические представления, закрепляется понятие о цвете, форме и величине.
+                <div class="cloud__text cloud__text--nadja">
+                    Надежда Крювель- дипломированый педагог по хореографии. Вот уже 30 лет, как после окончания школы ,
+                    мастер спорта международного класса по бальным танцам начала сама преподавать детям ритмику и танец
+                    в Областном дворце культуры г.Владимира. Там же она окончила колледж культуры по отделению
+                    хореографии и параллельно с ним психологический факультет педагогического университета. Два года в
+                    одной из частных танцевальных школ в Болгарии преподавала для малышей основы хореографии, а для
+                    детей постарше-спортивный бальный танец. С 2010 года ведет театр в русской школе выходного дня
+                    "Азбука" в нашем городе. Несколько лет назад стала преподавать основы раннего танцевального развития
+                    и в Школе мамы.
                 </div>
             </div>
             <div class="avatar left-side">
-                <svg class="avatar__bg" viewBox="0 0 1300 1300" preserveAspectRatio="xMidYMid meet">
+                <svg viewBox="0 0 1300 1300" preserveAspectRatio="xMidYMid meet">
                     <use xlink:href="#teacher-round-frame"/>
                 </svg>
                 <img class="avatar__image" src="img/content/teachers/anna.jpg"
@@ -149,6 +200,7 @@
             </div>
         </div>
     </div>
+    <div id="news"></div>
     </div>
 </main>
 <!--<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>

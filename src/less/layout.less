@@ -7,7 +7,6 @@
     background-size: contain;
   }
 }
-
 #navigation {
   .page-line-mixin;
   background-color: #c2ecfb;
@@ -48,11 +47,9 @@
     .navigation-shadow-mixin;
   }
 }
-
 .content {
   #presentation {
     .page-line-mixin;
-    height: 58rem;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, .85) 99%), url('../img/content/presentationBG.jpg') top center no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -67,9 +64,21 @@
         }
       }
       .button {
-        width: 2.5rem;
-        height: 2.5rem;
-        cursor: pointer;
+        .button__image {
+          width: 2.5rem;
+          height: 2.5rem;
+          cursor: pointer;
+        }
+        .button__title {
+          display: inline-block;
+          width: 20rem;
+          font-family: 'Amatic SC', sans-serif ;
+          font-size: 2rem;
+          font-weight: 700;
+          vertical-align: bottom;
+          color: #fff;
+          text-shadow: 2px 2px #000;
+        }
       }
       .iframe {
         display: none;
@@ -86,7 +95,7 @@
     .aboutUs__container--greenBG {
       background: linear-gradient(rgba(19, 210, 253, .17) 1%, rgba(98, 194, 193, 1) 20%);
     }
-    .aboutUs__container--purpleBG {
+    .aboutUs__container--greenPurpleBG {
       background: linear-gradient(rgba(98, 194, 193, 1) 1%, rgba(179, 120, 174, 1) 30%);
     }
     .aboutUs__container--purpleGreenBG {
