@@ -49,10 +49,9 @@
 }
 .content {
   #presentation {
+    @switch: bg-with-image;
     .page-line-mixin;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, .85) 99%), url('../img/content/presentationBG.jpg') top center no-repeat;
-    background-size: cover;
-    box-sizing: border-box;
+    .bg-mixin(rgba(255, 255, 255, 0.5); rgba(255, 255, 255, 0.85); url('../img/content/presentationBG.jpg'));
 
     .image {
       width: 51rem;
@@ -91,15 +90,17 @@
 
   }
   #aboutUs {
+    @switch: bg-gradient;
+
     .page-line-mixin;
     .aboutUs__container--greenBG {
-      background: linear-gradient(rgba(19, 210, 253, .17) 1%, rgba(98, 194, 193, 1) 20%);
+      .bg-mixin(rgba(19, 210, 253, .17); rgba(98, 194, 193, 1));
     }
     .aboutUs__container--greenPurpleBG {
-      background: linear-gradient(rgba(98, 194, 193, 1) 1%, rgba(179, 120, 174, 1) 30%);
+      .bg-mixin(rgba(98, 194, 193, 1); rgba(179, 120, 174, 1));
     }
     .aboutUs__container--purpleGreenBG {
-      background: linear-gradient(rgba(179, 120, 174, 1) 1%, rgba(98, 194, 193, 1) 30%);
+      .bg-mixin(rgba(179, 120, 174, 1); rgba(98, 194, 193, 1));
     }
     .cloud {
       width: 38rem;
@@ -115,6 +116,9 @@
         width: 26rem;
       }
     }
+  }
+  #news {
+    .page-line-mixin;
   }
   .cloud__text {
     font-family: 'Montserrat', sans-serif;

@@ -1,7 +1,21 @@
+
 .page-line-mixin {
   max-width: @container-width-desktop-xlg;
   margin: auto;
 }
+
+
+
+.bg-mixin(@color1, @color2, @bgImage) when (@switch = bg-with-image) {
+  background: linear-gradient(@color1, @color2), @bgImage top center no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.bg-mixin(@color1, @color2) when (@switch = bg-gradient) {
+  background: linear-gradient(@color1 1%, @color2 30%);
+}
+
+
 
 .menu-title-font-mixin() {
   font-family: 'Amatic SC',cursiv;

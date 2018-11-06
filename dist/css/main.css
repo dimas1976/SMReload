@@ -200,7 +200,7 @@ body ul {
 .content #presentation {
   max-width: 1100px;
   margin: auto;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.85) 99%), url('../img/content/presentationBG.jpg') top center no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.85)), url('../img/content/presentationBG.jpg') top center no-repeat;
   background-size: cover;
   box-sizing: border-box;
 }
@@ -238,7 +238,7 @@ body ul {
   margin: auto;
 }
 .content #aboutUs .aboutUs__container--greenBG {
-  background: linear-gradient(rgba(19, 210, 253, 0.17) 1%, #62c2c1 20%);
+  background: linear-gradient(rgba(19, 210, 253, 0.17) 1%, #62c2c1 30%);
 }
 .content #aboutUs .aboutUs__container--greenPurpleBG {
   background: linear-gradient(#62c2c1 1%, #b378ae 30%);
@@ -259,6 +259,10 @@ body ul {
 }
 .content #aboutUs .cloud .cloud__text--vika {
   width: 26rem;
+}
+.content #news {
+  max-width: 1100px;
+  margin: auto;
 }
 .content .cloud__text {
   font-family: 'Montserrat', sans-serif;
