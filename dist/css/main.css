@@ -204,19 +204,19 @@ body ul {
   background-size: cover;
   box-sizing: border-box;
 }
-.content #presentation .image {
+.content #presentation .presentation__items {
   width: 51rem;
   height: 37rem;
 }
-.content #presentation .image .video video {
-  width: 47.6rem;
+.content #presentation .presentation__items .video video {
+  width: 97%;
 }
-.content #presentation .image .button .button__image {
+.content #presentation .presentation__items .button .button__image {
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
 }
-.content #presentation .image .button .button__title {
+.content #presentation .presentation__items .button .button__title {
   display: inline-block;
   width: 20rem;
   font-family: 'Amatic SC', sans-serif;
@@ -226,10 +226,10 @@ body ul {
   color: #fff;
   text-shadow: 2px 2px #000;
 }
-.content #presentation .image .iframe {
+.content #presentation .presentation__items .iframe {
   display: none;
 }
-.content #presentation .image .iframe iframe {
+.content #presentation .presentation__items .iframe iframe {
   width: 47.6rem;
   height: 26.6em;
 }
@@ -351,21 +351,21 @@ body ul {
   padding-top: 11.3em;
   padding-bottom: 6.6em;
 }
-#presentation .image {
-  margin: 0 auto;
+#presentation .presentation__items {
+  /*   margin: 0 auto;*/
   position: relative;
 }
-#presentation .image .video {
+#presentation .presentation__items .video {
   position: absolute;
   left: 1.7em;
   top: 1.5em;
 }
-#presentation .image .button {
+#presentation .presentation__items .button {
   position: absolute;
   left: 3em;
   bottom: 10em;
 }
-#presentation .image .iframe {
+#presentation .presentation__items .iframe {
   position: absolute;
   left: 1.7em;
   bottom: 9em;

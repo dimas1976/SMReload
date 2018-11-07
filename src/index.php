@@ -56,8 +56,8 @@
 <main class="content">
     <div id="presentation">
         <div class="presentation__items">
-            <div class="image">
-                <svg viewBox="0 0 152 110" preserveAspectRatio="xMidYMin meet" class="display">
+
+                <svg viewBox="0 0 152 110"  preserveAspectRatio="xMidYMin meet" class="display">
                     <use xlink:href="#tv"></use>
                 </svg>
                 <div class="video">
@@ -72,10 +72,9 @@
                     <span class="button__title">Проиграть видео здесь</span>
                 </div>
                 <div class="iframe">
-                    <iframe name="smIFrame" src="https://www.youtube.com/embed/OrpoZ8U3-D4" frameborder="0"
-                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe name="smIFrame" src="https://www.youtube.com/embed/OrpoZ8U3-D4" width="100%" height="100%" frameborder="0"
+                            allow="autoplay; encrypted-media"></iframe>
                 </div>
-            </div>
         </div>
     </div>
     <div id="aboutUs">
@@ -200,7 +199,9 @@
             </div>
         </div>
     </div>
-    <div id="news"></div>
+    <div id="news">
+        <h2>НОВОСТИ</h2>
+    </div>
     </div>
 </main>
 <!--<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
