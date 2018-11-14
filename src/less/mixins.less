@@ -1,10 +1,8 @@
 
 .page-line-mixin {
-  max-width: @container-width-desktop-xlg;
+  max-width: @container-width-xlg;
   margin: auto;
 }
-
-
 
 .bg-mixin(@color1, @color2, @bgImage) when (@switch = bg-with-image) {
   background: linear-gradient(@color1, @color2), @bgImage top center no-repeat;
@@ -25,40 +23,7 @@
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
-.teacher-container-adjust-mixin() {
-/*  padding-top: @teacher-container-padding-top;
-  padding-bottom: @teacher-container-padding-bottom;
-  padding-right-left: @teacher-container-padding-right-left;*/
-  padding: @teacher-container-padding-top @teacher-container-padding-right-left @teacher-container-padding-bottom;
+.container-adjust-mixin() {
+  padding: @container-pt @container-padding-right-left @container-pb;
 }
 
-
-
-//---------------------ANIMATION----------------------------------
-/*
-@keyframes menu-image-fadeOut {
-  from {
-    opacity: 1;
-    margin-top:0;
-  }
-
-  to {
-    opacity: 0;
-    margin-top: -50px;
-  }
-}
-
-@keyframes menu-title-fadeOut {
-  from {
-    opacity: 0;
-    top:.5em;
-    color: #000;
-  }
-
-  to {
-    opacity: 1;
-    top: -.5em;
-    color: #f21322;
-  }
-
-}*/
