@@ -12,8 +12,11 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono|Montserrat&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/SMReload/dist/css/normalize.css">
     <link rel="stylesheet" href="/SMReload/dist/css/main.css">
+    <link rel="stylesheet" href="/SMReload/dist/css/normalize.css">
+    <style>
+        @keyframes slider { 100% {transform: translateX(-1366px)}}
+    </style>
 </head>
 <body>
 <?php include_once('img/svg/svg_defs.svg') ?>
@@ -185,7 +188,7 @@
             <h2 class="headline">ГАЛЛЕРЕЯ</h2>
             <hr class="underline">
             <div class="gallery__slider">
-<!--                <div class="gallery__screen">
+                <div class="gallery__screen">
                     <div class="imgContainer">
                         <img class="imgContainer__picture" src="img/content/gallery/pictures/2.jpg" alt="">
                         <img class="imgContainer__picture" src="img/content/gallery/pictures/3.jpg" alt="">
@@ -193,8 +196,11 @@
                         <img class="imgContainer__picture" src="img/content/gallery/pictures/5.jpg" alt="">
                         <img class="imgContainer__picture" src="img/content/gallery/pictures/6.jpg" alt="">
                         <img class="imgContainer__picture" src="img/content/gallery/pictures/7.jpg" alt="">
+                        <img class="imgContainer__picture" src="img/content/gallery/pictures/2.jpg" alt="">
+                        <img class="imgContainer__picture" src="img/content/gallery/pictures/3.jpg" alt="">
+                        <img class="imgContainer__picture" src="img/content/gallery/pictures/4.jpg" alt="">
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
     </section>

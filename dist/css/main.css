@@ -366,17 +366,26 @@ body a {
   background-size: contain;
 }
 .gallery__slider .gallery__screen {
-  width: 60%;
+  position: relative;
+  width: 85%;
+  height: 50%;
   overflow: hidden;
   margin: 5em auto 5em;
   box-sizing: border-box;
 }
-.gallery__slider .gallery__screen .imgContainer {
-  width: 89rem;
+.gallery__slider .gallery__screen .imgContainer,
+.gallery__slider .gallery__screen .imgContainerClone {
+  width: 445%;
+  height: auto;
   box-sizing: border-box;
+  position: absolute;
+  float: left;
+  transform: translate3d(0, 0, 0);
 }
-.gallery__slider .gallery__screen .imgContainer .imgContainer__picture {
+.gallery__slider .gallery__screen .imgContainer .imgContainer__picture,
+.gallery__slider .gallery__screen .imgContainerClone .imgContainer__picture {
   max-width: 100%;
+  height: auto;
 }
 .header__container {
   padding-bottom: 0.9em;
@@ -506,8 +515,11 @@ body a {
   padding-bottom: 5em;
 }
 .gallery__container .gallery__slider {
-  padding-top: 4em;
+  padding-top: 1.6em;
   margin: 4em auto;
+}
+.gallery__container .gallery__slider .imgContainer {
+  animation: slider 40s infinite linear;
 }
 .page-line-mixin {
   max-width: 1100px;
