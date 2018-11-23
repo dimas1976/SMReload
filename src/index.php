@@ -60,15 +60,15 @@
     <div id="presentation">
         <div class="presentation__items">
             <div class="video">
+                <video autoplay loop muted>
+                    <source src="video/headerclip_test.mp4" type="video/mp4"/>
+                </video>
                 <div class="button">
                     <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMin meet" class="button__image">
                         <use xlink:href="#btToYT"></use>
                     </svg>
                     <span class="button__title">Проиграть видео здесь</span>
                 </div>
-                <video autoplay loop muted>
-                    <source src="video/headerclip_test.mp4" type="video/mp4"/>
-                </video>
             </div>
             <div class="iframe">
                 <iframe name="smIFrame" src="https://www.youtube.com/embed/OrpoZ8U3-D4" width="100%" height="100%"
@@ -127,7 +127,7 @@
                      alt="Виктория Аронова развивает логику и образное мышление у детей">
             </div>
         </div>
-        <div class="aboutUs__container aboutUs__container--greenPurpleBG">
+<!--        <div class="aboutUs__container aboutUs__container--greenPurpleBG">
             <div class="cloud cloud--xenia left-side">
                 <div class="cloud__text cloud__text--xenia">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus ea eius illo in laudantium
@@ -154,7 +154,7 @@
                 <img class="avatar__image" src="img/content/teachers/anna.jpg"
                      alt="Анна Бурдина-учитель русского языка">
             </div>
-        </div>
+        </div>-->
     </div>
     <section id="news">
         <div class="news__container">
@@ -202,6 +202,39 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact__container">
+            <h2 class="headline">КОНТАКТ</h2>
+            <hr class="underline">
+            <form class="contact__form" action="">
+                <div class="pItems">
+                    <div>
+                        <label for="pname">Имя родителя<br><input type="text" id="pname" name="pname"></label>
+                    </div>
+                    <div>
+                        <label for="psurname">Фамилия родителя <br><input type="text" id="psurname" name="psurname"></label>
+                    </div>
+                    <div>
+                        <label for="tel">Телефон <br><input type="tel" id="tel" name="tel"></label>
+                    </div>
+                    <div>
+                        <label for="email">Электронный адрес <br> <input type="email" id="email" name="email"></label>
+                    </div>
+                </div>
+                <div class="chItems">
+                    <div>
+                        <label for="chname">Имя ребёнка<br><input type="text" id="chname" name="chname"></label>
+                    </div>
+                    <div>
+                        <label for="chsurname">Фамилия ребёнка<br><input type="text" id="chsurname" name="chsurname"></label>
+                    </div>
+                    <div>
+                        <label for="bday">Дата рождения ребёнка<br><input type="дате" id="bday" name="bday"></label>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
 </main>

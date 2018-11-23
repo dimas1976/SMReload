@@ -86,7 +86,7 @@
       left: 1.5em;
     }
     .iframe {
-      margin-top: -25.5em;
+      margin-top: 1.5em;
       margin-left: 1.5em;
     }
   }
@@ -147,6 +147,28 @@
     .imgContainer {
       animation: slider 40s infinite linear;
     }
+  }
+}
+.contact__container {
+  .container-adjust-mixin;
+  padding-top: @section-pt;
+  padding-bottom: @section-pb;
+
+  .contact__form {
+    margin: 4em auto;
+  }
+  .pItems {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em 5em;
+  }
+  .chItems {
+    margin-top: 4em;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em 5em;
   }
 }
 

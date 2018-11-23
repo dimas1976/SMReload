@@ -1,8 +1,10 @@
 
     "use strict";
-    const iFrame = document.querySelector('.iframe');
     const btToYT = document.querySelector('.button__image');
     btToYT.addEventListener('click', function () {
+        let iFrame = document.querySelector('.iframe');
+        let video = document.querySelector('.video');
+        video.setAttribute('style', 'display: none');
         iFrame.setAttribute('style', 'display: block');
         console.log('click');
     });
