@@ -67,7 +67,7 @@
                     <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMin meet" class="button__image">
                         <use xlink:href="#btToYT"></use>
                     </svg>
-                    <span class="button__title">Проиграть видео здесь</span>
+                    <span class="button__title">Проиграть видео</span>
                 </div>
             </div>
             <div class="iframe">
@@ -158,7 +158,7 @@
     </div>
     <section id="news">
         <div class="news__container">
-            <h2 class="headline">НОВОСТИ</h2>
+            <h2 class="headline--big">НОВОСТИ</h2>
             <hr class="underline">
             <div class="messagesContainer">
                 <div class="messagesContainer__message">
@@ -185,7 +185,7 @@
     </section>
     <section id="gallery">
         <div class="gallery__container">
-            <h2 class="headline">ГАЛЛЕРЕЯ</h2>
+            <h2 class="headline--big">ГАЛЛЕРЕЯ</h2>
             <hr class="underline">
             <div class="gallery__slider">
                 <div class="gallery__screen">
@@ -206,7 +206,7 @@
     </section>
     <section id="contact">
         <div class="contact__container">
-            <h2 class="headline">КОНТАКТ</h2>
+            <h2 class="headline--big">КОНТАКТ</h2>
             <hr class="underline">
             <form class="contact__form" action="">
                 <div class="pInputs">
@@ -240,7 +240,7 @@
                         <br>
                         <select class="contact__form--fieldBorder" name="visit" id="visit">
                             <option selected value="nursery">детский сад</option>
-                            <option value="school">школу / какой класс?</option>
+                            <option value="school">школу</option>
                             <option value="nothing">ничего не посещает</option>
                         </select>
                     </div>
@@ -272,6 +272,32 @@
                     <button>Отправить</button>
                 </div>
             </form>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer-container">
+            <h3 class="headline--small">Часы работы:</h3>
+            <div class="footer-container__items">
+                <div class="friday">
+                    <span class="day">по пятницам</span><br>
+                    Kulturpunkt <br>
+                    (Barmbek Basch)<br>
+                    Wohldorfer Str.30<br>
+                    с 15:45 до 17:15
+                </div>
+                <div class="saturday">
+                    <span class="day">по субботам</span><br>
+                    Wohlwillstr. 46<br>
+                    с 09:00 до 10:30
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">
+            <ul class="footer-note__list">
+                <li>контакт</li>
+                <li>|</li>
+                <li>импрессум</li>
+            </ul>
         </div>
     </section>
 </main>

@@ -21,8 +21,8 @@
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
-.container-adjust-mixin() {
-  padding: @container-pt @container-padding-right-left @container-pb;
+.container-adjust-mixin(@pt, @pb) {
+  padding: @pt @container-padding-right-left @pb;
 }
 
 
