@@ -209,30 +209,67 @@
             <h2 class="headline">КОНТАКТ</h2>
             <hr class="underline">
             <form class="contact__form" action="">
-                <div class="pItems">
+                <div class="pInputs">
                     <div>
-                        <label for="pname">Имя родителя<br><input type="text" id="pname" name="pname"></label>
+                        <label for="pname">Имя родителя<br><input class="contact__form--fieldBorder" type="text" id="pname" name="pname"></label>
                     </div>
                     <div>
-                        <label for="psurname">Фамилия родителя <br><input type="text" id="psurname" name="psurname"></label>
+                        <label for="psurname">Фамилия родителя <br><input class="contact__form--fieldBorder" type="text" id="psurname" name="psurname"></label>
                     </div>
                     <div>
-                        <label for="tel">Телефон <br><input type="tel" id="tel" name="tel"></label>
+                        <label for="tel">Телефон <br><input class="contact__form--fieldBorder" type="tel" id="tel" name="tel"></label>
                     </div>
                     <div>
-                        <label for="email">Электронный адрес <br> <input type="email" id="email" name="email"></label>
+                        <label for="email">Электронный адрес <br> <input class="contact__form--fieldBorder" type="email" id="email" name="email"></label>
                     </div>
                 </div>
-                <div class="chItems">
+                <div class="chInputs">
                     <div>
-                        <label for="chname">Имя ребёнка<br><input type="text" id="chname" name="chname"></label>
+                        <label for="chname">Имя ребёнка<br><input class="contact__form--fieldBorder" type="text" id="chname" name="chname"></label>
                     </div>
                     <div>
-                        <label for="chsurname">Фамилия ребёнка<br><input type="text" id="chsurname" name="chsurname"></label>
+                        <label for="chsurname">Фамилия ребёнка<br><input class="contact__form--fieldBorder" type="text" id="chsurname" name="chsurname"></label>
                     </div>
                     <div>
-                        <label for="bday">Дата рождения ребёнка<br><input type="дате" id="bday" name="bday"></label>
+                        <label for="bday">Дата рождения ребёнка<br><input class="contact__form--fieldBorder" type="дате" id="bday" name="bday"></label>
                     </div>
+                </div>
+                <div class="selectGroup">
+                    <div>
+                        <label for="visit">В настоящий момент ребёнок посещает</label>
+                        <br>
+                        <select class="contact__form--fieldBorder" name="visit" id="visit">
+                            <option selected value="nursery">детский сад</option>
+                            <option value="school">школу / какой класс?</option>
+                            <option value="nothing">ничего не посещает</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ruLangSkill">Уровень владения ребёнка русским языком</label>
+                        <br>
+                        <select class="contact__form--fieldBorder" name="ruLangSkill" id="ruLangSkill">
+                            <option selected value="understand">понимает</option>
+                            <option value="speak-understand">говорит - понимает</option>
+                            <option value="0-0">не говорит - не понимает</option>
+                            <option value="0">не говорит</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="information">Информация о семье</label>
+                        <br>
+                        <select class="contact__form--fieldBorder" name="information" id="information">
+                            <option selected value="mono">одноязычная семья</option>
+                            <option value="poly">Многоязычная семья</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="annotation">
+                    <label for="annotationField">Примечание / пожелание родителей:</label>
+                    <br>
+                    <textarea class="contact__form--fieldBorder" name="annotationField" id="annotationField"></textarea>
+                </div>
+                <div class="contactButton">
+                    <button>Отправить</button>
                 </div>
             </form>
         </div>
