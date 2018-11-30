@@ -1,12 +1,22 @@
-.header__container {
+/*.header__container {
   padding-bottom: @header-image-mb;
+}*/
+.container {
+  margin: 0 auto;
 }
 #navigation {
-  .navigation__menuItemsContainer {
+  .hamburger {
+    padding-left: 1em;
+  }
+  .menu-list {
     text-align: center;
     margin-top: 0;
+    padding-left: 0;
+    position: relative;
+    z-index: 999;
 
     .navigation__menuItem {
+      padding: .5em 0;
       position: relative;
       display: inline-block;
       pointer-events: none;
@@ -18,16 +28,20 @@
       }
 
       .menu-item-title--about {
-        left: 1.8em;
+        left: .9em;
+        right: .9em;
       }
       .menu-item-title--news {
-       left: 1.2em;
+       left: .6em;
+       right: .6em;
       }
       .menu-item-title--gallery {
-        left: 1.3em;
+        left: .65em;
+        right: .65em;
       }
       .menu-item-title--contact {
-        left: 1.2em;
+        left: .6em;
+        right: .6em;
       }
       .menu-item-image {
         opacity: 100;
@@ -42,7 +56,7 @@
           & ~ .menu-item-title {
             color: #f21322;
             opacity: 100;
-            top: -.5em;
+            top: -.2em;
             transition: all 1s;
           }
         }
@@ -62,10 +76,6 @@
 
       }
     }
-  }
-  .menu-list {
-    position: relative;
-    z-index: 999;
   }
 }
 #presentation {
@@ -162,24 +172,28 @@
       div:nth-child(1) {
         -ms-grid-column: 1;
         -ms-grid-row: 1;
-        margin-right: 6.5em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
       div:nth-child(2){
         -ms-grid-column: 2;
         -ms-grid-row: 1;
-        margin-left: 6.5em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
       div:nth-child(3) {
         -ms-grid-column: 1;
         -ms-grid-row: 2;
         margin-top: .5em;
-        margin-right: 6.5em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
       div:nth-child(4){
         -ms-grid-column: 2;
         -ms-grid-row: 2;
         margin-top: .5em;
-        margin-left: 6.5em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
     }
     .chInputs {
@@ -194,22 +208,29 @@
       div:nth-child(1) {
         -ms-grid-column: 1;
         -ms-grid-row: 1;
-        margin-right: 6.5em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
       div:nth-child(2){
         -ms-grid-column: 2;
         -ms-grid-row: 1;
-        margin-left: 6.5em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
       div:nth-child(3) {
         -ms-grid-column: 1;
         -ms-grid-row: 2;
         margin-top: .5em;
-        margin-right: 6.5em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
     }
     .selectGroup {
       margin-top: @fieldgroup-mt;
+      div {
+        padding-left: 3em;
+        padding-right: 3em;
+      }
       div:nth-child(2),
       div:last-child{
         margin-top: @field-mt;
@@ -217,12 +238,17 @@
     }
     .annotation {
       margin-top: @fieldgroup-mt;
+      padding-left: 3em;
+      padding-right: 3em;
       textarea {
         width: 60%;
         height: 10rem;
+
       }
     }
     .contactButton {
+      padding-left: 3em;
+      padding-right: 3em;
       margin-top: @field-mt;
       button {
         padding: .5em 1em;

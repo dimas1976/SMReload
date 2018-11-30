@@ -4,14 +4,121 @@
    Modify as content requires.
    ========================================================================== */
 
-@media (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media (max-width: 36em) {
+  /*Extra small devices (portrait phones, less than 576px)*/
+  .container {
+    max-width: 560px;
+  }
+  .header__container {
+    background: url("../img/header/logo_560.png")top center no-repeat;
+    height: 10rem;
+  }
 }
 
-@media (max-width: 69em) {
-  /* Style adjustments for viewports that meet the condition(1140px) */
+@media (max-width: 48em) {
+  /*Small devices (landscape phones, 576px and up)*/
+  .container {
+    max-width: 740px;
+  }
+  #header {
+    .header__container {
+      background: #c6f0fe url("../img/header/logo_768.png") top center no-repeat;
+      height: 8rem;
+      background-size: contain;
+    }
+  }
+
+  #navigation {
+    .navigation__menuItemsContainer {
+      position: relative;
+      background-color: #c2ecfa;
+      .hamburger {
+        display:block;
+        .hamburger__icon {
+          transform: rotate(0);
+          transition: 0.5s linear ;
+        }
+      }
+      .menu-list {
+        position: absolute;
+        left: -50%;
+        width: 50%;
+        box-shadow: none;
+        text-align: center;
+        padding-left: 2em;
+        display: block;
+        transition: all .5s linear;
+        background-color: #dbf6ff;
+        .navigation__menuItem {
+          display: block;
+          .menu-item-title {
+            position: static;
+            opacity: 1;
+          }
+          .menu-item-image {
+            display: none;
+            &:not(:hover) {
+              & ~ .menu-item-title {
+                opacity:1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 48em) {
+  /*Medium devices (tablets, 768px and up) */
+  .container {
+    max-width: 740px;
+  }
+  .header__container {
+    background: url("../img/header/logo_992.png") top center no-repeat;
+    width:100%;
+    height: 10rem;
+  }
+
+  #navigation {
+    .navigation__menuItemsContainer {
+      .aboutUs-icon {
+        max-width: 3rem;
+        height: 3rem;
+      }
+      .gallery-icon {
+        max-width: 4rem;
+        height: 3.1rem;
+      }
+      .news-icon {
+        max-width: 4rem;
+        height: 2.8rem;
+      }
+      .contact-icon {
+        max-width: 5.8rem;
+        height: 2.5rem;
+      }
+      .navigation__menuItem {
+        .menu-item-title {
+          font-size: 2em;
+        }
+        .menu-item-image {
+          &:hover {
+            & ~ .menu-item-title {
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
+@media (max-width: 62em) {
+  /* Large devices (desktops, 992px and up) */
+  .container {
+    max-width: 980px;
+  }
+}
 
 @media print,
 (min-resolution: 1.25dppx),
@@ -52,7 +159,6 @@
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
@@ -61,6 +167,7 @@
   pre {
     white-space: pre-wrap !important;
   }
+
   pre,
   blockquote {
     border: 1px solid #999;
@@ -71,7 +178,6 @@
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-
   thead {
     display: table-header-group;
   }
