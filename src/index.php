@@ -31,35 +31,44 @@
     <nav id="navigation">
         <div class="container navigation__menuItemsContainer">
         <div class="hamburger">
-            <svg class="hamburger__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280"
+            <svg class="hamburger__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 1280"
                  preserveAspectRatio="xMidYMid meet">
-                <use xlink:href="#navigation"></use>
+                <use xlink:href="#lenkrad"></use>
             </svg>
+            <span class="hamburger__title">Меню</span>
         </div>
         <ul class="menu-list">
-            <li class="navigation__menuItem">
-                <svg viewBox="0 0 380 370" preserveAspectRatio="xMinYMin meet" class="menu-item-image aboutUs-icon">
-                    <use xlink:href="#aboutUs"></use>
-                </svg>
-                <span class="menu-item-title menu-item-title--about">О НАС</span>
+            <li class="navigation__menuItem" data-scroll="aboutUs">
+                <a href="#">
+                    <svg  viewBox="0 0 380 370" preserveAspectRatio="xMinYMin meet" class="menu-item-image aboutUs-icon">
+                        <use xlink:href="#aboutUs-symbol"></use>
+                    </svg>
+                    <span class="menu-item-title menu-item-title--about">О НАС</span>
+                </a>
             </li>
-            <li class="navigation__menuItem">
-                <svg viewBox="0 0 470 330" preserveAspectRatio="xMinYMin meet" class="menu-item-image news-icon">
-                    <use xlink:href="#news"></use>
-                </svg>
-                <span class="menu-item-title menu-item-title--news">НОВОСТИ</span>
+            <li class="navigation__menuItem" data-scroll="news">
+                <a href="#">
+                    <svg  viewBox="0 0 470 330" preserveAspectRatio="xMinYMin meet" class="menu-item-image news-icon">
+                        <use xlink:href="#news-symbol"></use>
+                    </svg>
+                    <span class="menu-item-title menu-item-title--news">НОВОСТИ</span>
+                </a>
             </li>
-            <li class="navigation__menuItem">
-                <svg viewBox="0 0 119 143" preserveAspectRatio="xMidYMin meet" class="menu-item-image gallery-icon">
-                    <use xlink:href="#gallery"></use>
-                </svg>
-                <span class="menu-item-title menu-item-title--gallery">ГАЛЛЕРЕЯ</span>
+            <li class="navigation__menuItem" data-scroll="gallery">
+                <a href="#">
+                    <svg  viewBox="0 0 119 143" preserveAspectRatio="xMidYMin meet" class="menu-item-image gallery-icon">
+                        <use xlink:href="#gallery-symbol"></use>
+                    </svg>
+                    <span class="menu-item-title menu-item-title--gallery">ГАЛЛЕРЕЯ</span>
+                </a>
             </li>
-            <li class="navigation__menuItem">
-                <svg viewBox="0 0 600 246" preserveAspectRatio="xMidYMin meet" class="menu-item-image contact-icon">
-                    <use xlink:href="#contact"></use>
-                </svg>
-                <span class="menu-item-title menu-item-title--contact">КОНТАКТ</span>
+            <li class="navigation__menuItem" data-scroll="contact">
+                <a href="#">
+                    <svg data-scroll="contact" viewBox="0 0 600 246" preserveAspectRatio="xMidYMin meet" class="menu-item-image contact-icon">
+                        <use xlink:href="#contact-symbol"></use>
+                    </svg>
+                    <span class="menu-item-title menu-item-title--contact">КОНТАКТ</span>
+                </a>
             </li>
         </ul>
         </div>

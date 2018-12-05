@@ -42,18 +42,25 @@
       .menu-list {
         position: absolute;
         left: -50%;
-        width: 50%;
+        width: 41%;
         box-shadow: none;
         text-align: center;
-        padding-left: 2em;
+        padding-left: 5em;
         display: block;
         transition: all .5s linear;
         background-color: #dbf6ff;
         .navigation__menuItem {
           display: block;
+          white-space: nowrap;
+          border-bottom: 1px solid red;
+          width: 42%;
+          &:last-child {
+            border:none;
+          }
           .menu-item-title {
             position: static;
             opacity: 1;
+            color: #009688 !important;
           }
           .menu-item-image {
             display: none;
