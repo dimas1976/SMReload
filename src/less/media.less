@@ -3,127 +3,268 @@
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media (max-width: 36em) {
-  /*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 1200px) {
   .container {
-    max-width: 560px;
-  }
-  .header__container {
-    background: url("../img/header/logo_560.png")top center no-repeat;
-    height: 10rem;
+    max-width: 960px;
   }
 }
 
-@media (max-width: 48em) {
-  /*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 992px) {
+  /*Medium devices (tablets, 768px and up) */
   .container {
-    max-width: 740px;
+    max-width: 960px;
   }
+
+  #header .header__container {
+    background: #c6f0fe url("../img/header/logo_992.png") top center no-repeat;
+    /* width:100%;*/
+    background-size: contain;
+    height: 11rem;
+  }
+
+  .content {
+    #presentation {
+      .presentation__items {
+        width: 47rem;
+        height: 35rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 803px) and (max-width: 991px) {
   #header {
     .header__container {
-      background: #c6f0fe url("../img/header/logo_768.png") top center no-repeat;
-      height: 8rem;
+      height: 11rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+    /*Small devices (landscape phones, 576px and up)*/
+  .container {
+    max-width: 762px;
+  }
+  #header .header__container {
+    background: #c6f0fe url("../img/header/logo_768.png") top center no-repeat;
+    /* width:100%;*/
+    background-size: contain;
+    height: 9rem;
+    margin-top: 5.5em;
+  }
+  .hamburger {
+    display: block;
+    padding: 1em 1em;
+    .stick-navi;
+
+    .hamburger__icon {
+      transform: rotate(0);
+      transition: 0.5s linear;
+    }
+  }
+  .button-mobile {
+    display: block;
+    left: auto;
+    width: 30%;
+    top: 2em;
+    .button__title {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #009688;
+      padding-left: .3rem;
+    }
+  }
+  #navigation {
+    .navigation__menuItemsContainer {
+      .menu-list {
+        position: absolute;
+        display: block;
+        left: -50%;
+        width: 30%;
+        box-shadow: none;
+        background-color: #dbf6ff;
+        transition: all .5s linear;
+        top: 5em;
+        opacity: 1;
+        .navigation__menuItem {
+          margin: auto;
+          font-size: .5em;
+          display: block;
+          pointer-events: auto;
+          padding: 3em 0;
+          white-space: nowrap;
+          &:last-child {
+            padding-bottom: 4.2em;
+            border: none;
+          }
+          .menu-item-image {
+            padding-bottom: .3em;
+            &:not(:hover) {
+              & ~ .menu-item-title {
+                left:0;
+                right:0;
+                color: #009688;
+                opacity: 1;
+              }
+            }
+          }
+          .aboutUs-icon {
+            width: 3rem;
+          }
+          .menu-item-title--about {
+            margin-top: 2.7em;
+          }
+          .news-icon {
+            width: 3.5rem;
+          }
+          .menu-item-title--news {
+            margin-top: 2.3em;
+          }
+          .gallery-icon {
+            width: 2.8rem;
+          }
+          .menu-item-title--gallery {
+            margin-top: 3em;
+          }
+          .contact-icon {
+            width: 4.5rem;
+          }
+          .menu-item-title--contact {
+            margin-top: 1.8em;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    #presentation {
+      display: none;
+      .presentation__items {
+        width: 38rem;
+        height: 28rem;
+        .video {
+          max-width: 89%;
+          .button {
+            width: 66%;
+            .button__image {
+              width: 2rem;
+              height: 2rem;
+            }
+            .button__title {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+    #aboutUs {
+      .aboutUs__container {
+        padding: 1.8em 5.3em 3.3em;
+        .cloud {
+          max-width: 27rem;
+          height: 25rem;
+          .cloud__text--anna {
+            padding-top: 6em;
+          }
+          .cloud__text--nadja {
+            padding-top: 4.5em;
+            width: 73%;
+          }
+          .cloud__text--vika {
+            padding-top: 9em;
+          }
+          .cloud__text {
+            font-size: .6rem;
+          }
+        }
+      }
+    }
+  }
+  .avatar {
+    max-width: 10rem;
+    height: 10rem;
+  }
+  .headline--big {
+    font-size: 3rem;
+  }
+  .contact__container {
+    .contact__form {
+      .pInputs,.chInputs {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  #header {
+    .header__container {
+      background: #c6f0fe url("../img/header/logo_560.png") top center no-repeat;
       background-size: contain;
+      height: 5rem;
+      margin-top: 3.5em;
     }
   }
 
   #navigation {
     .navigation__menuItemsContainer {
-      position: relative;
-      background-color: #c2ecfa;
-      .hamburger {
-        display:block;
-        .hamburger__icon {
-          transform: rotate(0);
-          transition: 0.5s linear ;
-        }
-      }
       .menu-list {
         position: absolute;
         left: -50%;
         width: 41%;
-        box-shadow: none;
-        text-align: center;
         padding-left: 5em;
-        display: block;
-        transition: all .5s linear;
-        background-color: #dbf6ff;
+
         .navigation__menuItem {
           display: block;
           white-space: nowrap;
-          border-bottom: 1px solid red;
-          width: 42%;
+          pointer-events: auto;
           &:last-child {
-            border:none;
-          }
-          .menu-item-title {
-            position: static;
-            opacity: 1;
-            color: #009688 !important;
+            border: none;
           }
           .menu-item-image {
-            display: none;
             &:not(:hover) {
               & ~ .menu-item-title {
-                opacity:1;
+                width: 100%;
+                border-bottom: 1px solid red;
+                color: #009688;
+                opacity: 1;
               }
             }
           }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 48em) {
-  /*Medium devices (tablets, 768px and up) */
-  .container {
-    max-width: 740px;
-  }
-  .header__container {
-    background: url("../img/header/logo_992.png") top center no-repeat;
-    width:100%;
-    height: 10rem;
-  }
-
-  #navigation {
-    .navigation__menuItemsContainer {
-      .aboutUs-icon {
-        max-width: 3rem;
-        height: 3rem;
-      }
-      .gallery-icon {
-        max-width: 4rem;
-        height: 3.1rem;
-      }
-      .news-icon {
-        max-width: 4rem;
-        height: 2.8rem;
-      }
-      .contact-icon {
-        max-width: 5.8rem;
-        height: 2.5rem;
-      }
-      .navigation__menuItem {
-        .menu-item-title {
-          font-size: 2em;
-        }
-        .menu-item-image {
-          &:hover {
-            & ~ .menu-item-title {
-              top: 0;
-            }
+          .aboutUs-icon {
+            width: 3rem;
           }
         }
       }
     }
   }
-}
 
-@media (max-width: 62em) {
-  /* Large devices (desktops, 992px and up) */
-  .container {
-    max-width: 980px;
+  .content {
+    #presentation {
+      .presentation__items {
+        width: 29rem;
+        height: 23rem;
+        .video {
+          max-width: 89%;
+          .button {
+            width: 85%;
+            .button__image {
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+            .button__title {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

@@ -1,7 +1,9 @@
 (() => {
     "use strict";
     let menubar;
-
+    let menulist;
+    let mediaSM;//small devices
+    let mediaXS;//extra small
     window.addEventListener('load', () => {
         init();
 
@@ -9,7 +11,9 @@
 
     const init = () => {
         menubar = document.querySelector('.navigation__menuItemsContainer');
-
+        menulist = document.querySelector('.menu-list');
+        mediaXS = window.matchMedia('(max-width: 36em)');
+        mediaSM = window.matchMedia('(min-width:36.1em) and (max-width: 47.9em)');
         window.addEventListener('scroll', scrollHandler);
 
         let links = document.querySelectorAll('.navigation__menuItem');
@@ -28,12 +32,15 @@
 
     const clickHandler = (event) => {
         event.preventDefault();
-        console.log(event.currentTarget);
         let target = event.currentTarget.dataset.scroll;
-
-        document.querySelector('#' + target).scrollIntoView({
+        let el = document.querySelector('#' + target);
+        el.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
+        if(mediaXS.matches || mediaSM.matches) {
+            console.log('huhu');
+            menulist.style.left = '-50%';
+        }
     };
 })();
