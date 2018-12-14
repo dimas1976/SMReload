@@ -13,13 +13,7 @@
             icon.style.transform = 'rotate(' + angle + 'deg)';
             angle += 90;
             list.style.left = '0';
-            // addItemStyle();
+            list.style.visibility="visible";
         })
-
-        const addItemStyle = () => {
-            for (let x = 0; x < items.length; x++) {
-                items[x].style.cssText = itemStyle;
-            }
-        }
     })
 })();

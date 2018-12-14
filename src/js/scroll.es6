@@ -25,7 +25,7 @@
     const scrollHandler = () => {
         if (document.documentElement.scrollTop > 0) {
             menubar.classList.add('stick-navi');
-        } else {
+        } else if(document.documentElement.scrollTop == 0){
             menubar.classList.remove('stick-navi');
         }
     }
@@ -34,12 +34,12 @@
         event.preventDefault();
         let target = event.currentTarget.dataset.scroll;
         let el = document.querySelector('#' + target);
-        el.scrollIntoView({
+/*        el.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
-        });
+        });*/
+        window.location.href = '#' + target;
         if(mediaXS.matches || mediaSM.matches) {
-            console.log('huhu');
             menulist.style.left = '-50%';
         }
     };

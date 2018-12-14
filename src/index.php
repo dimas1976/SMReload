@@ -32,14 +32,14 @@
 <header id="header">
     <div class="container header__container"></div>
 </header>
-<div class="hamburger container">
+<div class="hamburger">
     <svg class="hamburger__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 1280"
          preserveAspectRatio="xMidYMid meet">
         <use xlink:href="#lenkrad"></use>
     </svg>
     <span class="hamburger__title">Меню</span>
 </div>
-<div class="button button-mobile container">
+<div class="button button-mobile">
     <a href="https://www.youtube.com/watch?v=OrpoZ8U3-D4&t=1s">
         <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMin meet" class="button-mobile__image">
             <use xlink:href="#btToYT"></use>
@@ -311,33 +311,33 @@
             </form>
         </div>
     </section>
-    <section id="footer">
-        <div class="footer-container container">
-            <h3 class="headline--small">Часы работы:</h3>
-            <div class="footer-container__items">
-                <div class="friday">
-                    <span class="day">по пятницам</span><br>
-                    Kulturpunkt <br>
-                    (Barmbek Basch)<br>
-                    Wohldorfer Str.30<br>
-                    с 15:45 до 17:15
-                </div>
-                <div class="saturday">
-                    <span class="day">по субботам</span><br>
-                    Wohlwillstr. 46<br>
-                    с 09:00 до 10:30
-                </div>
+</main>
+<footer id="footer">
+    <div class="footer-container container">
+        <h3 class="headline--small">Часы работы:</h3>
+        <div class="footer-container__items">
+            <div class="friday">
+                <span class="day">по пятницам</span><br>
+                Kulturpunkt <br>
+                (Barmbek Basch)<br>
+                Wohldorfer Str.30<br>
+                с 15:45 до 17:15
+            </div>
+            <div class="saturday">
+                <span class="day">по субботам</span><br>
+                Wohlwillstr. 46<br>
+                с 09:00 до 10:30
             </div>
         </div>
-        <div class="footer-note">
-            <ul class="footer-note__list">
-                <li>контакт</li>
-                <li>|</li>
-                <li>импрессум</li>
-            </ul>
-        </div>
-    </section>
-</main>
+    </div>
+    <div class="footer-note">
+        <ul class="footer-note__list">
+            <li>контакт</li>
+            <li>|</li>
+            <li>импрессум</li>
+        </ul>
+    </div>
+</footer>
 
 <!--<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
 <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
