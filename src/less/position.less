@@ -1,8 +1,7 @@
-/*.header__container {
-  padding-bottom: @header-image-mb;
-}*/
 .container {
   margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .hamburger {
   padding-left: 1em;
@@ -29,6 +28,10 @@
         position: relative;
         display: inline-block;
         pointer-events: none;
+        .menu-item-image {
+          //animation: runInMenu .5s linear forwards;
+          margin-left: 500%;
+        }
 
         .menu-item-title {
           position: absolute;
@@ -91,10 +94,10 @@
 #presentation {
   display: flex;
   justify-content: space-around;
-  padding-top: @video-pt;
-  padding-bottom: @video-pb;
+  height: 0;
 
   .presentation__items {
+    margin-left: -100%;
     .video {
       margin-top: @video-mt-xlg;
       margin-left: @video-ml-xlg;
@@ -104,6 +107,10 @@
       position: absolute;
       bottom: 1em;
       left: 1.5em;
+
+      .button__title {
+        margin-left: 163px;
+      }
     }
     .iframe {
       margin-top: 1.5em;
@@ -121,6 +128,7 @@
       margin-right: auto;
     }
     .cloud {
+      visibility: hidden;
       .cloud__text {
         margin: auto;
       }

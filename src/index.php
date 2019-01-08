@@ -12,15 +12,8 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono|Montserrat&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/SMReload/dist/css/main.css">
-    <link rel="stylesheet" href="/SMReload/dist/css/normalize.css">
-    <style>
-        @keyframes slider {
-            100% {
-                transform: translateX(-1366px)
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/SMReloadAnimations/dist/css/main.css">
+    <link rel="stylesheet" href="/SMReloadAnimations/dist/css/normalize.css">
 </head>
 <body>
 <?php include_once('img/svg/svg_defs.svg') ?>
@@ -343,7 +336,8 @@
 <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/ven^^dor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
 <script src="/SMReload/dist/js/plugins.js"></script>-->
-<script src="/SMReload/dist/js/bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
+<script src="/SMReloadAnimations/dist/js/bundle.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>

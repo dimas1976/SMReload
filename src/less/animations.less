@@ -1,0 +1,120 @@
+@keyframes slider {
+   100% {
+     transform: translateX(-1366px)
+   }
+ }
+
+@keyframes fadeHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes runInMenu {
+  from {
+    margin-left: 500%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes showPresentationBg {
+  from {
+    height: 0;
+  }
+  to {
+    height: 879px;
+    padding-top: @video-pt;
+    padding-bottom: @video-pb;
+  }
+}
+
+@keyframes fadeInTV {
+  from {
+    margin-left: -100%;
+    opacity:0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScreen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateTvBt {
+  from {
+    width: 11.5rem;
+    height: 11.5rem;
+  }
+  to {
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity:1;
+  }
+}
+
+@keyframes animateBtTitle {
+  from {
+    margin-left: 163px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateAboutBg {
+  0%{
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+    //.container-adjust-mixin(@container-pt, @container-pb);
+  }
+}
+
+@keyframes animateAvatar {
+  0% {
+  transform: scale(2,2);
+  }
+  100% {
+    transform: scale(1,1);
+    visibility: visible;
+  }
+}
+
+@keyframes animateCloud {
+  0% {
+    transform: scale(0,0);
+  }
+  100% {
+    transform: scale(1,1);
+    visibility: visible;
+  }
+}
+
+@keyframes fadeInCldTxt {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
