@@ -6,14 +6,18 @@
         "use strict";
         let icon = document.querySelector('.hamburger__icon');
         let list = document.querySelector('.menu-list');
-        let items = document.querySelectorAll('.navigation__menuItem');
-        let itemStyle = "visibility: visible; opacity: 1";
+        let flag = 0;
         let angle = 90;
         icon.addEventListener('click', function () {
-            icon.style.transform = 'rotate(' + angle + 'deg)';
-            angle += 90;
-            list.style.left = '0';
-            list.style.visibility="visible";
+            if(flag==0) {
+                flag++;
+                icon.style.transform = 'rotate(' + angle + 'deg)';
+                angle += 90;
+                list.style.left = '0';
+            } else {
+                flag = 0;
+                list.style.left = '-20em';
+            }
         })
     })
 })();

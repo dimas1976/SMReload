@@ -34,6 +34,31 @@
     let vAvatar;
     let vCloudTxt;
 
+    let newsBg;
+    let newsBgYPosition;
+    let newsHeadline;
+    let underline;
+    let news;
+    let linkToArchive;
+
+    let galleryBg;
+    let galleryBgYPosition;
+    let galleryHeadline;
+    let galleryHeadlineUnderline;
+
+    let contactBg;
+    let contactBgYPosition;
+    let contactHeadline;
+    let contactHeadlineUnderline;
+    let form;
+
+    let footer;
+    let footerYPosition;
+    let footerHeadline;
+    let footerColumn1;
+    let footerColumn2;
+
+
     window.addEventListener('load', () => {
         init();
         animation(window.pageYOffset);
@@ -69,6 +94,30 @@
         vAvatar = document.querySelector('.cloud--vika + .avatar');
         vCloudTxt = document.querySelector('.cloud__text--vika');
 
+        newsBg = document.querySelector('.news__container');
+        newsBgYPosition = newsBg.offsetTop;
+        newsHeadline = document.querySelector('.news__container .headline--big');
+        underline = document.querySelector('.news__container .underline');
+        news = document.querySelector('.messagesContainer');
+        linkToArchive = document.querySelector('.archiveLink');
+
+        galleryBg = document.querySelector('.gallery__container');
+        galleryBgYPosition = galleryBg.offsetTop;
+        galleryHeadline = document.querySelector('.gallery__container .headline--big');
+        galleryHeadlineUnderline = document.querySelector('.gallery__container .underline');
+
+        contactBg = document.querySelector('.contact__container');
+        contactBgYPosition = contactBg.offsetTop;
+        contactHeadline = document.querySelector('.contact__container .headline--big');
+        contactHeadlineUnderline = document.querySelector('.contact__container .underline');
+        form = document.querySelector('.contact__form');
+
+        footer = document.querySelector('.footer-container');
+        footerYPosition = footer.offsetTop;
+        footerHeadline = document.querySelector('.footer-container .headline--small');
+        footerColumn1 = document.querySelector('.friday');
+        footerColumn2 = document.querySelector('.saturday');
+
         mediaXS = window.matchMedia('(max-width: 36em)');
         mediaSM = window.matchMedia('(min-width:36.1em) and (max-width: 47.9em)');
 
@@ -101,15 +150,28 @@
            runInMenuItems();
            animatePresentation();
        }
-       if(windowTopPosition >= aBgYPosition) {
+       if( (windowTopPosition + window.innerHeight) >= aBgYPosition) {
            animateASection();
        }
-       if(windowTopPosition >=nBgYPosition) {
+       if((windowTopPosition + window.innerHeight)  >=nBgYPosition) {
            animateNSection();
        }
-       if(windowTopPosition >=vBgYPosition) {
+       if((windowTopPosition + window.innerHeight)  >=vBgYPosition) {
            animateVSection();
        }
+       if((windowTopPosition + window.innerHeight)  >= newsBgYPosition) {
+           animateNewsSection();
+       }
+       if((windowTopPosition + window.innerHeight)  >= galleryBgYPosition) {
+           animateGallery();
+       }
+       if((windowTopPosition + window.innerHeight)  >= contactBgYPosition) {
+           animateForm();
+       }
+       if((windowTopPosition + window.innerHeight)  >= footerYPosition) {
+           animateFooter();
+       }
+
     };
 
    const runInMenuItems = ()=> {
@@ -141,6 +203,34 @@
        vAvatar.style.animation = 'animateAvatar .5s cubic-bezier(0.440, 0.010, 0.235, 1.005) 1s forwards';
        vCloud.style.animation = 'animateCloud .5s linear 1.5s forwards';
        vCloudTxt.style.animation = 'fadeInCldTxt .5s linear 2s forwards';
+   }
+
+   const animateNewsSection = ()=> {
+       newsBg.style.animation = 'showPresentationBg .5s linear forwards';
+       newsHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
+       underline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
+       news.style.animation = 'animateMessages .5s linear 1.5s forwards';
+       linkToArchive.style.animation = 'animateArchiveLink 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1.5s forwards';
+   }
+
+   const animateGallery = ()=> {
+       galleryBg.style.animation = 'showPresentationBg .5s linear forwards';
+       galleryHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
+       galleryHeadlineUnderline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
+   }
+
+   const animateForm = ()=> {
+       contactBg.style.animation = 'showPresentationBg .5s linear forwards';
+       contactHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
+       contactHeadlineUnderline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
+       form.style.animation = 'animateForm .5s linear 1.5s forwards';
+   }
+
+   const animateFooter = ()=> {
+       footerHeadline.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards';
+       footerColumn1.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s forwards';
+       footerColumn2.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s forwards';
+
    }
 
 })();

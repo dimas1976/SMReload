@@ -31,7 +31,7 @@ module.exports = {
                 host: 'localhost',
                 port: 3000,
                 files: ['./src/*.php', './dist/css/*.css'],
-                proxy: 'http://localhost/SMReloadAnimations/src/',
+                proxy: 'http://localhost/SMReload/src/',
                 browser: ["iexplore"]
             }
         )

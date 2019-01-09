@@ -144,10 +144,12 @@
   }
   #news {
     .news__container {
+      opacity: 0;
       @switch: bg-with-image;
       .bg-mixin(rgba(255, 255, 255, 0.8); rgba(255, 255, 255, 0.8); url('../img/content/news/newsBG.jpg'));
       .messagesContainer {
         font-family: 'Montserrat', sans-serif;
+        opacity: 0;
         .date {
           font-weight: 700;
         }
@@ -158,6 +160,7 @@
           font-weight: 700;
           font-family: "Amatic SC", sans-serif;
           font-size: 1.6rem;
+          opacity: 0;
         }
       }
     }
@@ -166,7 +169,7 @@
     .gallery__container {
       @switch: bg-with-image;
       .bg-mixin(rgba(255, 255, 255, 0); rgba(255, 255, 255, 0); url('../img/content/gallery/galleryBG.jpg'));
-
+      opacity:0;
     }
     .gallery__screen {
       box-shadow: -1px 2px 10px 5px #727874;
@@ -178,6 +181,7 @@
       .bg-mixin(rgba(255, 255, 255, .8); rgba(255, 255, 255, .8); url('../img/content/contact/contactBG.jpg'));
 
       .contact__form {
+        opacity: 0;
         width: 95%;
         font-family: 'PT Mono', monospace;
         input {
@@ -216,9 +220,16 @@
       font-family: 'PT Mono', monospace;
       font-weight: 500;
       font-size: 2rem;
+      opacity:0;
     }
     .footer-container__items {
       font-size: 1.5em;
+      .friday {
+        opacity:0;
+      }
+      .saturday {
+        opacity:0;
+      }
       .day {
         color: #fff;
       }
@@ -280,6 +291,7 @@
     height: .3em;
     background-color: #f21322;
     margin: auto;
+    opacity: 0;
 }
 .more {
   //font-weight: 600;
@@ -321,6 +333,7 @@
   font-weight: 700;
   font-size: 6rem;
   line-height: 1em;
+  opacity: 0;
 }
 .button {
 

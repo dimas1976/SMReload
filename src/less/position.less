@@ -94,7 +94,10 @@
 #presentation {
   display: flex;
   justify-content: space-around;
-  height: 0;
+  padding-top: @video-pt;
+  padding-bottom: @video-pb;
+  opacity: 0;
+
 
   .presentation__items {
     margin-left: -100%;
@@ -154,13 +157,17 @@
 }
 .news__container {
   .container-adjust-mixin(@section-pt, @section-pb);
+
   .messagesContainer {
     padding-top: 4em;
+    position: relative;
     .messagesContainer__message {
       margin-bottom: 3em;
     }
     .archiveLink {
       margin-left: auto;
+      position: relative;
+      left: 6em;
     }
   }
 }
@@ -178,6 +185,8 @@
   .container-adjust-mixin(@section-pt, @section-pb);
   .contact__form {
     margin: 4em auto;
+    position: relative;
+    top: 3em;
     .pInputs {
       display: -ms-grid;
       -ms-grid-columns: 1fr 1fr;
@@ -300,6 +309,11 @@
   }
 }
 .footer-note {
+  margin-top: 2em;
   margin-bottom: 2em;
+}
+.underline {
+  position:relative;
+  left: 6em;
 }
 
