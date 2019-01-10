@@ -1,8 +1,4 @@
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+
 @media (max-width: 1200px) {
   .container {
     max-width: 1100px;
@@ -15,6 +11,20 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+
+  }
+  #navigation {
+    .navigation__menuItemsContainer {
+      .menu-list {
+        .navigation__menuItem {
+          .menu-item-image {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
   .content {
     #aboutUs {
       .aboutUs__container {
@@ -82,9 +92,9 @@
           height: 29rem;
 
           .cloud__text--nadja {
-            width: 79%;
-            padding-top: 4.5em;
-            line-height: 1.4em;
+            width: 82%;
+            padding-top: 4.4em;
+            line-height: 1.3em;
           }
         }
         .cloud--vika {
@@ -94,7 +104,8 @@
           .cloud__text--vika {
             padding-top: 9em;
             padding-right: .5em;
-            width: 62%;
+            width: 69%;
+            line-height: 1.3em;
           }
         }
         .avatar {
@@ -225,6 +236,7 @@
             border: none;
           }
           .menu-item-image {
+            margin-left: 0;
             &:not(:hover) {
               margin-top: 0;
               & ~ .menu-item-title {
@@ -277,7 +289,6 @@
       }
     }
   }
-
   .content {
     #presentation {
       display: none;
@@ -429,7 +440,6 @@
       }
     }
   }
-
   #footer {
     .footer-container {
       padding: 2em 0;
@@ -442,15 +452,52 @@
       }
     }
   }
-
   .headline--big {
     font-size: 3rem;
   }
-
   .footer-note {
     margin-top: 1em;
   }
+}
 
+/*##Device = Low Resolution Tablets, Mobiles (Landscape)
+
+##Screen = B/w 481px to 767px*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .button-mobile {
+    padding-left: 2em;
+  }
+ /* .content {
+    #aboutUs {
+      .aboutUs__container {
+
+        .cloud--anna {
+          max-width: 29rem;
+          height: 18rem;
+          margin-left: 6em;
+
+          .cloud__text--anna {
+            padding-top: 4.2em;
+            width: 86%;
+          }
+
+        }
+        .cloud--nadja {
+          max-width: 28em;
+          height: 17em;
+          margin-left: -4em;
+          .cloud__text--nadja {
+            padding-top: 3em;
+            width: 64%;
+          }
+        }
+        .avatar {
+          max-width: 8rem;
+          height: 8rem;
+        }
+      }
+    }
+  }*/
 }
 
 @media (max-width: 576px) {
@@ -507,6 +554,7 @@
             border: none;
           }
           .menu-item-image {
+            margin-left: 0;
             &:not(:hover) {
               & ~ .menu-item-title {
                 width: 100%;
@@ -687,6 +735,14 @@
       }
     }
   }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+
 }
 
 @media print,

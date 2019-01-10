@@ -4,6 +4,7 @@
     let menulist;
     let mediaSM;//small devices
     let mediaXS;//extra small
+    let mediaTablet;
 
     let header;
     let headerYPosition;
@@ -120,6 +121,7 @@
 
         mediaXS = window.matchMedia('(max-width: 36em)');
         mediaSM = window.matchMedia('(min-width:36.1em) and (max-width: 47.9em)');
+        mediaTablet = window.matchMedia('(min-width: 768px) and (max-width: 1024px)')
 
         window.addEventListener('scroll', scrollHandler);
 
@@ -139,7 +141,7 @@
         event.preventDefault();
         let target = event.currentTarget.dataset.scroll;
         window.location.href = '#' + target;
-        if(mediaXS.matches || mediaSM.matches) {
+        if(mediaXS.matches || mediaSM.matches || mediaTablet) {
             menulist.style.left = '-50%';
         }
     };

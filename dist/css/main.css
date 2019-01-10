@@ -169,16 +169,6 @@
     transform: scaleX(1);
   }
 }
-/*@keyframes animateFooterColumn {
-  0% {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleX(1);
-  }
-}*/
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -411,7 +401,6 @@ body a {
   right: 0;
   top: 0;
   background-color: #dbf6ff;
-  opacity: 1;
   z-index: 999;
 }
 .button-mobile .button-mobile__image {
@@ -972,14 +961,12 @@ body a {
   right: 0;
   top: 0;
   background-color: #dbf6ff;
-  opacity: 1;
   z-index: 999;
 }
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+.fadeOutNavi {
+  opacity: 0;
+  transition: opacity .5s linear;
+}
 @media (max-width: 1200px) {
   .container {
     max-width: 1100px;
@@ -990,6 +977,9 @@ body a {
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
+  #navigation .navigation__menuItemsContainer .menu-list .navigation__menuItem .menu-item-image {
+    margin-left: 0;
+  }
   .content #aboutUs .aboutUs__container .cloud--anna {
     max-width: 32rem;
     height: 29rem;
@@ -1048,9 +1038,9 @@ body a {
     height: 29rem;
   }
   .content #aboutUs .aboutUs__container .cloud--nadja .cloud__text--nadja {
-    width: 79%;
-    padding-top: 4.5em;
-    line-height: 1.4em;
+    width: 82%;
+    padding-top: 4.4em;
+    line-height: 1.3em;
   }
   .content #aboutUs .aboutUs__container .cloud--vika {
     max-width: 33rem;
@@ -1060,7 +1050,8 @@ body a {
   .content #aboutUs .aboutUs__container .cloud--vika .cloud__text--vika {
     padding-top: 9em;
     padding-right: .5em;
-    width: 62%;
+    width: 69%;
+    line-height: 1.3em;
   }
   .content #aboutUs .aboutUs__container .avatar {
     max-width: 11rem;
@@ -1116,7 +1107,6 @@ body a {
     right: 0;
     top: 0;
     background-color: #dbf6ff;
-    opacity: 1;
     z-index: 999;
   }
   .hamburger .hamburger__icon {
@@ -1166,6 +1156,9 @@ body a {
   }
   #navigation .navigation__menuItemsContainer .menu-list .navigation__menuItem:last-child {
     border: none;
+  }
+  #navigation .navigation__menuItemsContainer .menu-list .navigation__menuItem .menu-item-image {
+    margin-left: 0;
   }
   #navigation .navigation__menuItemsContainer .menu-list .navigation__menuItem .menu-item-image:not(:hover) {
     margin-top: 0;
@@ -1368,6 +1361,45 @@ body a {
     margin-top: 1em;
   }
 }
+/*##Device = Low Resolution Tablets, Mobiles (Landscape)
+
+##Screen = B/w 481px to 767px*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .button-mobile {
+    padding-left: 2em;
+  }
+  /* .content {
+    #aboutUs {
+      .aboutUs__container {
+
+        .cloud--anna {
+          max-width: 29rem;
+          height: 18rem;
+          margin-left: 6em;
+
+          .cloud__text--anna {
+            padding-top: 4.2em;
+            width: 86%;
+          }
+
+        }
+        .cloud--nadja {
+          max-width: 28em;
+          height: 17em;
+          margin-left: -4em;
+          .cloud__text--nadja {
+            padding-top: 3em;
+            width: 64%;
+          }
+        }
+        .avatar {
+          max-width: 8rem;
+          height: 8rem;
+        }
+      }
+    }
+  }*/
+}
 @media (max-width: 576px) {
   .container {
     width: 100%;
@@ -1413,6 +1445,9 @@ body a {
   }
   #navigation .navigation__menuItemsContainer .menu-list .navigation__menuItem:last-child {
     border: none;
+  }
+  #navigation .navigation__menuItemsContainer .menu-list .navigation__menuItem .menu-item-image {
+    margin-left: 0;
   }
   #navigation .navigation__menuItemsContainer .menu-list .navigation__menuItem .menu-item-image:not(:hover) ~ .menu-item-title {
     width: 100%;
@@ -1553,6 +1588,10 @@ body a {
     padding-left: .8em;
   }
 }
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
 @media print, (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
