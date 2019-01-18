@@ -189,6 +189,7 @@ html {
 body {
   font-size: 100%;
   background-color: #bcebf5;
+  overflow: hidden;
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -342,6 +343,12 @@ body a {
 .container {
   max-width: 1100px;
 }
+#preloader .preloader__container {
+  max-width: 50%;
+}
+#preloader .preloader__container .preloader__progress {
+  width: 80%;
+}
 #header .header__container {
   background: #c6f0fe url("../img/header/logo.png") top center no-repeat;
   background-size: contain;
@@ -379,11 +386,10 @@ body a {
 #navigation .menu-list {
   list-style-type: none;
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.5);
+  display: none;
 }
 .hamburger {
   width: 100%;
-  /*  background-color: #dbf6ff;*/
-  display: none;
 }
 .hamburger .hamburger__icon {
   width: 3.5rem;
@@ -401,6 +407,7 @@ body a {
   right: 0;
   top: 0;
   background-color: #dbf6ff;
+  width: 100%;
   z-index: 999;
 }
 .button-mobile .button-mobile__image {
@@ -663,8 +670,17 @@ body a {
   padding-right: 15px;
   padding-left: 15px;
 }
+#preloader .preloader__container {
+  margin: 40% auto;
+  height: 400px;
+  text-align: center;
+}
+#preloader .preloader__container .preloader__text {
+  margin-bottom: 1em;
+}
 .hamburger {
   padding-left: 1em;
+  display: none;
 }
 .hamburger .hamburger__title {
   vertical-align: middle;
@@ -961,6 +977,7 @@ body a {
   right: 0;
   top: 0;
   background-color: #dbf6ff;
+  width: 100%;
   z-index: 999;
 }
 .fadeOutNavi {
@@ -977,6 +994,12 @@ body a {
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
+  #header .header__container {
+    background: #c6f0fe url("../img/header/logo.png") top center no-repeat;
+    /* width:100%;*/
+    background-size: contain;
+    height: 11rem;
+  }
   #navigation .navigation__menuItemsContainer .menu-list .navigation__menuItem .menu-item-image {
     margin-left: 0;
   }
@@ -1011,6 +1034,10 @@ body a {
   }
   .content #aboutUs .aboutUs__container .cloud__text {
     font-size: .8rem !important;
+  }
+  .visible {
+    opacity: 1 !important;
+    transition: opacity 1s;
   }
 }
 /*
@@ -1071,7 +1098,6 @@ body a {
   }
   #header .header__container {
     background: #c6f0fe url("../img/header/logo_992.png") top center no-repeat;
-    /* width:100%;*/
     background-size: contain;
     height: 11rem;
   }
@@ -1092,13 +1118,13 @@ body a {
   }
   #header .header__container {
     background: #c6f0fe url("../img/header/logo_768.png") top center no-repeat;
-    /* width:100%;*/
     background-size: contain;
     height: 9rem;
     margin-top: 3.5em;
   }
   .hamburger {
     display: block;
+    opacity: 0;
     padding: .6em 1em;
     width: 55%;
     height: 4em;
@@ -1107,6 +1133,7 @@ body a {
     right: 0;
     top: 0;
     background-color: #dbf6ff;
+    width: 100%;
     z-index: 999;
   }
   .hamburger .hamburger__icon {
@@ -1119,6 +1146,7 @@ body a {
   }
   .button-mobile {
     display: block;
+    opacity: 0;
     left: auto;
     width: 45%;
     padding: 1.2em 0 1em 3em;
@@ -1362,43 +1390,15 @@ body a {
   }
 }
 /*##Device = Low Resolution Tablets, Mobiles (Landscape)
-
 ##Screen = B/w 481px to 767px*/
 @media (min-width: 481px) and (max-width: 767px) {
+  .visible {
+    opacity: 1 !important;
+    transition: opacity 1s;
+  }
   .button-mobile {
     padding-left: 2em;
   }
-  /* .content {
-    #aboutUs {
-      .aboutUs__container {
-
-        .cloud--anna {
-          max-width: 29rem;
-          height: 18rem;
-          margin-left: 6em;
-
-          .cloud__text--anna {
-            padding-top: 4.2em;
-            width: 86%;
-          }
-
-        }
-        .cloud--nadja {
-          max-width: 28em;
-          height: 17em;
-          margin-left: -4em;
-          .cloud__text--nadja {
-            padding-top: 3em;
-            width: 64%;
-          }
-        }
-        .avatar {
-          max-width: 8rem;
-          height: 8rem;
-        }
-      }
-    }
-  }*/
 }
 @media (max-width: 576px) {
   .container {
@@ -1423,12 +1423,12 @@ body a {
     font-size: 1.2rem;
   }
   .button-mobile {
-    width: 55%;
+    width: 60%;
     height: 4rem;
-    padding-top: 1.3em;
+    padding-top: .6em;
   }
   .button-mobile .button-mobile__image {
-    width: 1.5rem;
+    width: 1.9rem;
   }
   .button-mobile .button__title {
     font-size: 1.2rem;
@@ -1592,6 +1592,12 @@ body a {
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
+@media (min-width: 320px) and (max-width: 480px) {
+  .visible {
+    opacity: 1 !important;
+    transition: opacity 1s;
+  }
+}
 @media print, (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }

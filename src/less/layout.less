@@ -1,6 +1,14 @@
 .container {
   max-width: 1100px;
 }
+#preloader {
+  .preloader__container {
+    max-width: 50%;
+    .preloader__progress {
+      width: 80%;
+    }
+  }
+}
 #header {
   .header__container {
     background: #c6f0fe url("../img/header/logo.png") top center no-repeat;
@@ -43,13 +51,12 @@
   .menu-list {
     list-style-type: none;
     .navigation-shadow-mixin;
-    //height: 10em;
+    display: none;
   }
 }
 .hamburger {
   width: 100%;
-/*  background-color: #dbf6ff;*/
-  display: none;
+
   .hamburger__icon {
     width: 3.5rem;
   }

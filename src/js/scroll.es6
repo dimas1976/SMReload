@@ -1,9 +1,10 @@
-(() => {
     "use strict";
+    import { showYT } from './presentation.es6';
+    import { startSlider } from './gallery.es6';
+
     let menubar;
     let menulist;
     let mediaSM;//small devices
-    let mediaXS;//extra small
     let mediaTablet;
 
     let header;
@@ -59,12 +60,10 @@
     let footerColumn1;
     let footerColumn2;
 
-
-    window.addEventListener('load', () => {
+    export const startAnima = () => {
         init();
         animation(window.pageYOffset);
-    });
-
+    };
     const init = () => {
         menubar = document.querySelector('.navigation__menuItemsContainer');
         menulist = document.querySelector('.menu-list');
@@ -119,9 +118,7 @@
         footerColumn1 = document.querySelector('.friday');
         footerColumn2 = document.querySelector('.saturday');
 
-        mediaXS = window.matchMedia('(max-width: 36em)');
-        mediaSM = window.matchMedia('(min-width:36.1em) and (max-width: 47.9em)');
-        mediaTablet = window.matchMedia('(min-width: 768px) and (max-width: 1024px)')
+        mediaSM = window.matchMedia('(max-width: 768px)');
 
         window.addEventListener('scroll', scrollHandler);
 
@@ -141,98 +138,97 @@
         event.preventDefault();
         let target = event.currentTarget.dataset.scroll;
         window.location.href = '#' + target;
-        if(mediaXS.matches || mediaSM.matches || mediaTablet) {
+        if (mediaSM.matches) {
             menulist.style.left = '-50%';
         }
     };
 
-   const animation = (windowTopPosition)=> {
-       if(windowTopPosition >= headerYPosition){
-           header.style.animation = 'fadeHeader .5s linear forwards';
-           runInMenuItems();
-           animatePresentation();
-       }
-       if( (windowTopPosition + window.innerHeight) >= aBgYPosition) {
-           animateASection();
-       }
-       if((windowTopPosition + window.innerHeight)  >=nBgYPosition) {
-           animateNSection();
-       }
-       if((windowTopPosition + window.innerHeight)  >=vBgYPosition) {
-           animateVSection();
-       }
-       if((windowTopPosition + window.innerHeight)  >= newsBgYPosition) {
-           animateNewsSection();
-       }
-       if((windowTopPosition + window.innerHeight)  >= galleryBgYPosition) {
-           animateGallery();
-       }
-       if((windowTopPosition + window.innerHeight)  >= contactBgYPosition) {
-           animateForm();
-       }
-       if((windowTopPosition + window.innerHeight)  >= footerYPosition) {
-           animateFooter();
-       }
+    const animation = (windowTopPosition) => {
+        if (windowTopPosition >= headerYPosition) {
+            header.style.animation = 'fadeHeader .5s linear forwards';
+            menulist.style.display = 'block';
+            runInMenuItems();
+            animatePresentation();
+        }
+        if ((windowTopPosition + window.innerHeight) >= aBgYPosition) {
+            animateASection();
+        }
+        if ((windowTopPosition + window.innerHeight) >= nBgYPosition) {
+            animateNSection();
+        }
+        if ((windowTopPosition + window.innerHeight) >= vBgYPosition) {
+            animateVSection();
+        }
+        if ((windowTopPosition + window.innerHeight) >= newsBgYPosition) {
+            animateNewsSection();
+        }
+        if ((windowTopPosition + window.innerHeight) >= galleryBgYPosition) {
+            animateGallery();
+        }
+        if ((windowTopPosition + window.innerHeight) >= contactBgYPosition) {
+            animateForm();
+        }
+        if ((windowTopPosition + window.innerHeight) >= footerYPosition) {
+            animateFooter();
+        }
 
     };
 
-   const runInMenuItems = ()=> {
-       for (let menuItem of menuItems) {
-           menuItem.style.animation = 'runInMenu .5s linear forwards';
-       }
-   }
-   const animatePresentation = ()=> {
-       presentation.style.animation = 'showPresentationBg .5s linear forwards';
-       tv.style.animation = 'fadeInTV .5s linear .5s forwards';
-       tvScreen.style.animation = 'fadeInScreen .5s linear 1s forwards'
-       tvButton.style.animation = 'animateTvBt .5s linear 1.5s forwards';
-       buttonTitle.style.animation = 'animateBtTitle .5s linear 2s forwards';
-   }
-   const animateASection = ()=> {
-       aBg.style.animation = 'animateAboutBg .5s linear forwards';
-       aAvatar.style.animation = 'animateAvatar .5s cubic-bezier(0.440, 0.010, 0.235, 1.005) .5s forwards';
-       aCloud.style.animation = 'animateCloud .5s linear 1.5s forwards';
-       aCloudTxt.style.animation = 'fadeInCldTxt .5s linear 2s forwards';
-   }
-   const animateNSection = ()=> {
-       nBg.style.animation = 'animateAboutBg .5s linear forwards';
-       nAvatar.style.animation = 'animateAvatar .5s cubic-bezier(0.440, 0.010, 0.235, 1.005) 1s forwards';
-       nCloud.style.animation  = 'animateCloud .5s linear 1.5s forwards';
-       nCloudTxt.style.animation = 'fadeInCldTxt .5s linear 2s forwards';
-   }
-   const animateVSection = ()=> {
-       vBg.style.animation = 'animateAboutBg .5s linear forwards';
-       vAvatar.style.animation = 'animateAvatar .5s cubic-bezier(0.440, 0.010, 0.235, 1.005) 1s forwards';
-       vCloud.style.animation = 'animateCloud .5s linear 1.5s forwards';
-       vCloudTxt.style.animation = 'fadeInCldTxt .5s linear 2s forwards';
-   }
+    const runInMenuItems = () => {
 
-   const animateNewsSection = ()=> {
-       newsBg.style.animation = 'showPresentationBg .5s linear forwards';
-       newsHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
-       underline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
-       news.style.animation = 'animateMessages .5s linear 1.5s forwards';
-       linkToArchive.style.animation = 'animateArchiveLink 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1.5s forwards';
-   }
+        for (let menuItem of menuItems) {
+            menuItem.style.animation = 'runInMenu .5s linear forwards';
+        }
+    }
+    const animatePresentation = () => {
+        presentation.style.animation = 'showPresentationBg .5s linear forwards';
+        tv.style.animation = 'fadeInTV .5s linear .5s forwards';
+        tvScreen.style.animation = 'fadeInScreen .5s linear 1s forwards'
+        tvButton.style.animation = 'animateTvBt .5s linear 1.5s forwards';
+        buttonTitle.style.animation = 'animateBtTitle .5s linear 2s forwards';
+        showYT();
+    }
+    const animateASection = () => {
+        aBg.style.animation = 'animateAboutBg .5s linear forwards';
+        aAvatar.style.animation = 'animateAvatar .5s cubic-bezier(0.440, 0.010, 0.235, 1.005) .5s forwards';
+        aCloud.style.animation = 'animateCloud .5s linear 1.5s forwards';
+        aCloudTxt.style.animation = 'fadeInCldTxt .5s linear 2s forwards';
+    }
+    const animateNSection = () => {
+        nBg.style.animation = 'animateAboutBg .5s linear forwards';
+        nAvatar.style.animation = 'animateAvatar .5s cubic-bezier(0.440, 0.010, 0.235, 1.005) 1s forwards';
+        nCloud.style.animation = 'animateCloud .5s linear 1.5s forwards';
+        nCloudTxt.style.animation = 'fadeInCldTxt .5s linear 2s forwards';
+    }
+    const animateVSection = () => {
+        vBg.style.animation = 'animateAboutBg .5s linear forwards';
+        vAvatar.style.animation = 'animateAvatar .5s cubic-bezier(0.440, 0.010, 0.235, 1.005) 1s forwards';
+        vCloud.style.animation = 'animateCloud .5s linear 1.5s forwards';
+        vCloudTxt.style.animation = 'fadeInCldTxt .5s linear 2s forwards';
+    }
+    const animateNewsSection = () => {
+        newsBg.style.animation = 'showPresentationBg .5s linear forwards';
+        newsHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
+        underline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
+        news.style.animation = 'animateMessages .5s linear 1.5s forwards';
+        linkToArchive.style.animation = 'animateArchiveLink 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1.5s forwards';
+    }
+    const animateGallery = () => {
+        galleryBg.style.animation = 'showPresentationBg .5s linear forwards';
+        galleryHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
+        galleryHeadlineUnderline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
+        startSlider();
+    }
+    const animateForm = () => {
+        contactBg.style.animation = 'showPresentationBg .5s linear forwards';
+        contactHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
+        contactHeadlineUnderline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
+        form.style.animation = 'animateForm .5s linear 1.5s forwards';
+    }
+    const animateFooter = () => {
+        footerHeadline.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards';
+        footerColumn1.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s forwards';
+        footerColumn2.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s forwards';
 
-   const animateGallery = ()=> {
-       galleryBg.style.animation = 'showPresentationBg .5s linear forwards';
-       galleryHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
-       galleryHeadlineUnderline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
-   }
+    }
 
-   const animateForm = ()=> {
-       contactBg.style.animation = 'showPresentationBg .5s linear forwards';
-       contactHeadline.style.animation = "animateHeadline .5s linear .5s forwards";
-       contactHeadlineUnderline.style.animation = "animateUnderline 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s forwards";
-       form.style.animation = 'animateForm .5s linear 1.5s forwards';
-   }
-
-   const animateFooter = ()=> {
-       footerHeadline.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards';
-       footerColumn1.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s forwards';
-       footerColumn2.style.animation = 'animateFooter .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s forwards';
-
-   }
-
-})();

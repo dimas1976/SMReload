@@ -1,4 +1,4 @@
-(() => {
+export const showYT = ()=> {
     "use strict";
     const btToYT = document.querySelector('.button__image');
     btToYT.addEventListener('click', function () {
@@ -7,6 +7,8 @@
         video.setAttribute('style', 'display: none');
         iFrame.setAttribute('style', 'display: block');
     });
-})();
+};
+
+
 
 

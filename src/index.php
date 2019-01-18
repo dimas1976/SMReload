@@ -22,6 +22,12 @@
     your browser</a> to improve your experience and security.</p>
 <![endif]-->
 <!-- Add your site or application content here -->
+<div id="preloader">
+    <div class="preloader__container">
+        <p class="preloader__text">Подождите, идёт загрузка...</p>
+        <progress class="preloader__progress" value="0" max="100" />
+    </div>
+</div>
 <header id="header">
     <div class="container header__container"></div>
 </header>

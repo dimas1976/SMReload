@@ -11,8 +11,11 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .container {
-
+  #header .header__container {
+    background: #c6f0fe url("../img/header/logo.png") top center no-repeat;
+    /* width:100%;*/
+    background-size: contain;
+    height: 11rem;
   }
   #navigation {
     .navigation__menuItemsContainer {
@@ -63,6 +66,10 @@
         }
       }
     }
+  }
+  .visible {
+    opacity: 1 !important;
+    transition: opacity 1s;
   }
 }
 
@@ -136,14 +143,11 @@
   .container {
     max-width: 960px;
   }
-
   #header .header__container {
     background: #c6f0fe url("../img/header/logo_992.png") top center no-repeat;
-    /* width:100%;*/
     background-size: contain;
     height: 11rem;
   }
-
   .content {
     #presentation {
       .presentation__items {
@@ -168,17 +172,15 @@
     max-width: 762px;
 
   }
-
   #header .header__container {
     background: #c6f0fe url("../img/header/logo_768.png") top center no-repeat;
-    /* width:100%;*/
     background-size: contain;
     height: 9rem;
     margin-top: 3.5em;
   }
-
   .hamburger {
     display: block;
+    opacity:0;
     padding: .6em 1em;
     width: 55%;
     height: 4em;
@@ -193,9 +195,9 @@
       font-size: 1.5rem;
     }
   }
-
   .button-mobile {
     display: block;
+    opacity:0;
     left: auto;
     width: 45%;
     padding: 1.2em 0 1em 3em;
@@ -210,7 +212,6 @@
       padding-left: .3rem;
     }
   }
-
   #navigation {
     .navigation__menuItemsContainer {
       .menu-list {
@@ -461,43 +462,15 @@
 }
 
 /*##Device = Low Resolution Tablets, Mobiles (Landscape)
-
 ##Screen = B/w 481px to 767px*/
 @media (min-width: 481px) and (max-width: 767px) {
+  .visible {
+    opacity: 1 !important;
+    transition: opacity 1s;
+  }
   .button-mobile {
     padding-left: 2em;
   }
- /* .content {
-    #aboutUs {
-      .aboutUs__container {
-
-        .cloud--anna {
-          max-width: 29rem;
-          height: 18rem;
-          margin-left: 6em;
-
-          .cloud__text--anna {
-            padding-top: 4.2em;
-            width: 86%;
-          }
-
-        }
-        .cloud--nadja {
-          max-width: 28em;
-          height: 17em;
-          margin-left: -4em;
-          .cloud__text--nadja {
-            padding-top: 3em;
-            width: 64%;
-          }
-        }
-        .avatar {
-          max-width: 8rem;
-          height: 8rem;
-        }
-      }
-    }
-  }*/
 }
 
 @media (max-width: 576px) {
@@ -528,11 +501,11 @@
   }
 
   .button-mobile {
-    width: 55%;
+    width: 60%;
     height: 4rem;
-    padding-top: 1.3em;
+    padding-top: .6em;
     .button-mobile__image {
-      width: 1.5rem;
+      width: 1.9rem;
     }
     .button__title {
       font-size: 1.2rem;
@@ -742,7 +715,10 @@
   ##Screen = B/w 320px to 479px
 */
 @media (min-width: 320px) and (max-width: 480px) {
-
+  .visible {
+    opacity: 1 !important;
+    transition: opacity 1s;
+  }
 }
 
 @media print,
