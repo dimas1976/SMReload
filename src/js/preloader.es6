@@ -5,9 +5,7 @@ let bar;
 export const init = ()=> {
     "use strict";
     let req = new XMLHttpRequest();
-    req.open('GET','https://192.168.0.4' +
-        '' +
-        '/SMReload');
+    req.open('GET','https://static.schkola-mama.de/');
     req.withCredentials = true;
     req.send();
     req.addEventListener('progress', progressHandler);

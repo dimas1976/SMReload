@@ -3,17 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Задача "Школы Мамы" - помочь родителям и детям</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|PT+Mono|Montserrat&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/SMReload/dist/css/main.css">
-    <link rel="stylesheet" href="/SMReload/dist/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC%7CPT+Mono%7CMontserrat&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/normalize.css">
 </head>
 <body>
 <?php include_once('img/svg/svg_defs.svg') ?>
@@ -25,14 +23,14 @@
 <div id="preloader">
     <div class="preloader__container">
         <p class="preloader__text">Подождите, идёт загрузка...</p>
-        <progress class="preloader__progress" value="0" max="100" />
+        <progress class="preloader__progress" value="0" max="100"></progress>
     </div>
 </div>
 <header id="header">
     <div class="container header__container"></div>
 </header>
 <div class="hamburger">
-    <svg class="hamburger__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 1280"
+    <svg class="hamburger__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 1280"
          preserveAspectRatio="xMidYMid meet">
         <use xlink:href="#lenkrad"></use>
     </svg>
@@ -90,7 +88,7 @@
         <div class="presentation__items">
             <div class="video">
                 <video autoplay loop muted>
-                    <source src="video/headerclip_test.mp4" type="video/mp4"/>
+                    <source src="video/headerclip.mp4" type="video/mp4"/>
                 </video>
                 <div class="video__button button">
                     <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMin meet" class="button__image">
@@ -100,8 +98,7 @@
                 </div>
             </div>
             <div class="iframe">
-                <iframe name="smIFrame" src="https://www.youtube.com/embed/OrpoZ8U3-D4" width="100%" height="100%"
-                        frameborder="0"
+                <iframe name="smIFrame" src="https://www.youtube.com/embed/OrpoZ8U3-D4"
                         allow="autoplay; encrypted-media"></iframe>
             </div>
         </div>
@@ -156,34 +153,6 @@
                      alt="Виктория Аронова развивает логику и образное мышление у детей">
             </div>
         </div>
-        <!--        <div class="aboutUs__container aboutUs__container--greenPurpleBG">
-                    <div class="cloud cloud--xenia left-side">
-                        <div class="cloud__text cloud__text--xenia">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus ea eius illo in laudantium
-                                modi mollitia natus, quam quidem quos recusandae reiciendis voluptate? Nihil quaerat sequi unde
-                                voluptatem. Aut commodi cupiditate, debitis delectus eveniet fuga modi mollitia porro
-                                praesentium quidem, rem sit suscipit ullam velit voluptas? Aut, dolorem, excepturi.</p>
-                        </div>
-                    </div>
-                    <div class="avatar right-side">
-                        <img class="avatar__image" src="img/content/teachers/anna.jpg"
-                             alt="Анна Бурдина-учитель русского языка">
-                    </div>
-                </div>
-                <div class="aboutUs__container aboutUs__container--purpleGreenBG">
-                    <div class="cloud cloud--tanja right-side">
-                        <div class="cloud__text cloud__text--nadja">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequatur culpa dolorem earum
-                                eos quas quod rem. Accusamus aspernatur beatae commodi dolore error eveniet excepturi facilis
-                                incidunt iure minus mollitia nisi nostrum nulla odio odit omnis optio placeat, porro qui quos
-                                rem repellendus, sapiente sequi suscipit totam veritatis voluptatem voluptatibus!</p>
-                        </div>
-                    </div>
-                    <div class="avatar left-side">
-                        <img class="avatar__image" src="img/content/teachers/anna.jpg"
-                             alt="Анна Бурдина-учитель русского языка">
-                    </div>
-                </div>-->
     </div>
     <section id="news">
         <div class="news__container container">
@@ -237,7 +206,7 @@
         <div class="contact__container container">
             <h2 class="headline--big">КОНТАКТ</h2>
             <hr class="underline">
-            <form class="contact__form" action="">
+            <form class="contact__form">
                 <div class="pInputs">
                     <div>
                         <label for="pname">Имя родителя<br><input class="contact__form--fieldBorder" type="text"
@@ -252,8 +221,7 @@
                                                             name="tel"></label>
                     </div>
                     <div>
-                        <label for="email">Электронный адрес <br> <input class="contact__form--fieldBorder" type="email"
-                                                                         id="email" name="email"></label>
+                        <label for="email">Электронный адрес <br> <input class="contact__form--fieldBorder" type="email" id="email" name="email"></label>
                     </div>
                 </div>
                 <div class="chInputs">
@@ -266,7 +234,7 @@
                                                                          id="chsurname" name="chsurname"></label>
                     </div>
                     <div>
-                        <label for="bday">Дата рождения ребёнка<br><input class="contact__form--fieldBorder" type="дате"
+                        <label for="bday">Дата рождения ребёнка<br><input class="contact__form--fieldBorder" type="date"
                                                                           id="bday" name="bday"></label>
                     </div>
                 </div>
@@ -343,7 +311,7 @@
 <script>window.jQuery || document.write('<script src="js/ven^^dor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
 <script src="/SMReload/dist/js/plugins.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
-<script src="/SMReload/dist/js/bundle.js"></script>
+<script src="./js/bundle.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>

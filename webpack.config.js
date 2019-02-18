@@ -1,8 +1,31 @@
 /**
  * Created by Dima on 14.09.2018.
  */
+
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const path = require ('path');
+const validator = require('html-validator');
+const fs = require('fs');
+const path = require('path');
+
+const options = {
+    format: 'text'
+};
+
+fs.readFile( './src/index.php', 'utf8', (err, html) => {
+    if (err) {
+        throw err;
+    }
+
+    options.data = html
+
+    validator(options)
+        .then((data) => {
+            console.log(data)
+        })
+        .catch((error) => {
+            console.error(error)
+        })
+});
 
 module.exports = {
     entry: ['./src/js/main.es6'],
